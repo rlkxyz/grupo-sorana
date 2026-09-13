@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grupo Sorana — Audi e Volkswagen</title>
+<meta name="description" content="Grupo Sorana — concessionária multimarca Audi e Volkswagen em São Paulo desde 1968. Novos, seminovos, peças, serviços, consórcio e vendas diretas pra frotas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container header__inner">
+    <a href="#home" class="logo">
+      <span class="logo__main">GRUPO SORANA</span>
+      <span class="logo__sub">AUDI · VOLKSWAGEN</span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <div class="nav-item has-mega">
+        <button class="nav-trigger" aria-haspopup="true">
+          Marcas
+          <svg viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="mega-menu">
+          <div class="mega-menu__col">
+            <span class="mega-menu__brand mega-menu__brand--audi">Audi</span>
+            <a href="audi.html#novos">Novos</a>
+            <a href="audi.html#seminovos">Seminovos</a>
+            <a href="audi.html#servicos">Serviços</a>
+            <a href="audi.html#acessorios">Acessórios</a>
+          </div>
+          <div class="mega-menu__col">
+            <span class="mega-menu__brand mega-menu__brand--vw">Volkswagen</span>
+            <a href="volkswagen.html#novos">Novos</a>
+            <a href="volkswagen.html#seminovos">Seminovos</a>
+            <a href="volkswagen.html#ofertas">Ofertas</a>
+            <a href="volkswagen.html#servicos">Serviços</a>
+            <a href="volkswagen.html#acessorios">Acessórios</a>
+            <a href="volkswagen.html#pecas">Peças</a>
+            <a href="volkswagen.html#consorcio">Consórcio</a>
+          </div>
+        </div>
+      </div>
+      <a href="quem-somos.html">Sobre</a>
+      <a href="vendas-diretas.html">Frotas</a>
+      <a href="enderecos.html">Unidades</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <a href="https://wa.me/5511913272977" class="btn btn--primary nav-cta" target="_blank" rel="noopener">
+      Agendar visita
+    </a>
+
+    <button class="burger" id="burger" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" id="home">
+    <div class="hero__slider" id="hero-slider" aria-hidden="true">
+      <div class="hero__slide is-active" style="background-image: url('img/audi-q8.jpg');"></div>
+      <div class="hero__slide" style="background-image: url('img/vw-tera.png');"></div>
+      <div class="hero__slider-overlay"></div>
+    </div>
+
+    <button class="hero__arrow hero__arrow--prev" id="hero-prev" aria-label="Slide anterior">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <button class="hero__arrow hero__arrow--next" id="hero-next" aria-label="Próximo slide">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+
+    <div class="hero__dots" id="hero-dots">
+      <button class="hero__dot is-active" aria-label="Ir pro slide Audi"></button>
+      <button class="hero__dot" aria-label="Ir pro slide Volkswagen"></button>
+    </div>
+
+    <div class="container hero__inner">
+      <p class="eyebrow">Concessionária multimarca premium</p>
+      <h1>Audi e Volkswagen.<br>Um padrão, duas paixões.</h1>
+      <p class="hero__lead">
+        Novos, seminovos, peças, serviços, consórcio e vendas diretas —
+        com o atendimento que quem dirige um carro premium espera, em
+        todas as unidades do grupo.
+      </p>
+      <div class="hero__actions">
+        <a href="https://wa.me/5511913272977" class="btn btn--primary" target="_blank" rel="noopener">Agendar visita</a>
+        <a href="#unidades" class="btn btn--outline">Ver unidades</a>
+      </div>
+      <p class="hero__proof">Desde 1968 no mercado automotivo de São Paulo.</p>
+    </div>
+  </section>
+
+  <section class="marcas" id="marcas">
+    <div class="container">
+      <p class="eyebrow">Marcas</p>
+      <h2>Duas marcas. Um só padrão de excelência.</h2>
+
+      <div class="marcas-grid">
+
+        <article class="marca-card marca-card--audi">
+          <div class="marca-card__top">
+            <span class="marca-card__nome">Audi</span>
+            <span class="marca-card__tag">Sofisticação e desempenho</span>
+          </div>
+          <ul class="marca-card__lista">
+            <li>Veículos novos</li>
+            <li>Seminovos selecionados</li>
+            <li>Peças e serviço originais</li>
+            <li>Test-drive sob agendamento</li>
+          </ul>
+          <div class="marca-card__actions">
+            <a href="https://wa.me/5511913272977" class="btn btn--ghost" target="_blank" rel="noopener">Falar sobre Audi</a>
+            <a href="tel:+551137955811" class="marca-card__tel">(11) 3795-5811</a>
+          </div>
+          <a href="audi.html" class="marca-card__link">Ver linha completa Audi →</a>
+        </article>
+
+        <article class="marca-card marca-card--vw">
+          <div class="marca-card__top">
+            <span class="marca-card__nome">Volkswagen</span>
+            <span class="marca-card__tag">Confiança pra todo trajeto</span>
+          </div>
+          <ul class="marca-card__lista">
+            <li>Veículos novos</li>
+            <li>Seminovos selecionados</li>
+            <li>Peças e serviço originais</li>
+            <li>Consórcio Volkswagen</li>
+          </ul>
+          <div class="marca-card__actions">
+            <a href="https://wa.me/5511995250280" class="btn btn--ghost" target="_blank" rel="noopener">Falar sobre Volkswagen</a>
+            <a href="tel:+551121415811" class="marca-card__tel">(11) 2141-5811</a>
+          </div>
+          <a href="volkswagen.html" class="marca-card__link">Ver linha completa Volkswagen →</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="sobre" id="sobre">
+    <div class="container">
+      <p class="eyebrow">Desde 1968</p>
+      <h2>58 anos construindo uma referência multimarca em São Paulo.</h2>
+      <p class="sobre__lead">
+        Tudo começou com a primeira unidade Volkswagen, na Av. Braz Leme —
+        que segue até hoje como matriz do grupo. Em 1995, a chegada da Audi
+        deu início a uma operação multimarca que já vendeu mais de 300 mil
+        carros e opera hoje com centros de serviço certificados ISO 9001.
+      </p>
+
+      <div class="stats-row">
+        <div class="stat">
+          <span class="stat__num">58</span>
+          <span class="stat__label">Anos de história</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">+300 mil</span>
+          <span class="stat__label">Carros vendidos</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num">ISO 9001</span>
+          <span class="stat__label">Centros de serviço certificados</span>
+        </div>
+      </div>
+
+      <a href="quem-somos.html" class="sobre__link">Conhecer nossa história completa →</a>
+    </div>
+  </section>
+
+  <section class="frotas" id="frotas">
+    <div class="container frotas__inner">
+      <div class="frotas__text">
+        <p class="eyebrow">Vendas diretas</p>
+        <h2>Frota grande, negociação à altura.</h2>
+        <p>
+          O Grupo Sorana atende frotistas e locadoras com condições
+          exclusivas na linha Audi — desconto progressivo por volume e
+          taxas facilitadas de financiamento, negociado direto com um
+          consultor dedicado.
+        </p>
+        <div class="frotas__actions">
+          <a href="https://wa.me/5511913272977?text=Ol%C3%A1!%20Tenho%20interesse%20em%20vendas%20diretas%20para%20frota%2Flocadora." class="btn btn--primary" target="_blank" rel="noopener">Falar com consultor de frotas</a>
+          <a href="vendas-diretas.html" class="btn btn--outline">Ver programa completo</a>
+        </div>
+      </div>
+      <div class="frotas__card">
+        <span class="frotas__card-label">Linha disponível pra frotas</span>
+        <div class="frotas__pills">
+          <span class="pill">Q8</span>
+          <span class="pill">Q7</span>
+          <span class="pill">A6 Sportback e-tron</span>
+          <span class="pill">A5 Sedan</span>
+          <span class="pill">A3 Sedan</span>
+          <span class="pill">A3 Sportback</span>
+        </div>
+        <ul class="frotas__lista">
+          <li>Frotas corporativas</li>
+          <li>Locadoras</li>
+          <li>Negociação dedicada por volume</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="unidades" id="unidades">
+    <div class="container">
+      <div class="unidades__head">
+        <div>
+          <p class="eyebrow">Unidades</p>
+          <h2>Onde estamos</h2>
+        </div>
+        <a href="enderecos.html" class="btn btn--outline">Ver todos os endereços</a>
+      </div>
+
+      <div class="unidades-grid">
+        <div class="unidade-card">
+          <span class="unidade-card__marca unidade-card__marca--audi">Audi</span>
+          <h3>Audi Center Pinheiros</h3>
+          <p class="unidade-card__endereco">Av. Pedroso de Morais, 1552 — Pinheiros, São Paulo/SP — CEP 05420-002</p>
+          <div class="unidade-card__contatos">
+            <a href="https://wa.me/5511913272977" target="_blank" rel="noopener">WhatsApp (11) 91327-2977</a>
+            <a href="tel:+551121099099">(11) 2109-9099</a>
+          </div>
+          <a class="unidade-card__mapa" href="https://www.google.com/maps/search/?api=1&query=Av.+Pedroso+de+Morais%2C+1552%2C+Pinheiros%2C+S%C3%A3o+Paulo" target="_blank" rel="noopener">Ver no mapa →</a>
+        </div>
+
+        <div class="unidade-card">
+          <span class="unidade-card__marca unidade-card__marca--audi">Audi</span>
+          <h3>Audi Lapa</h3>
+          <p class="unidade-card__endereco">Av. Ermano Marchetti, 826 — Lapa, São Paulo/SP — CEP 05038-000</p>
+          <div class="unidade-card__contatos">
+            <a href="tel:+551137955811">Vendas (11) 3795-5811</a>
+            <a href="tel:+551137955525">Serviços (11) 3795-5525</a>
+            <a href="tel:+551137955520">Peças (11) 3795-5520</a>
+          </div>
+          <a class="unidade-card__mapa" href="https://www.google.com/maps/search/?api=1&query=Av.+Ermano+Marchetti%2C+826%2C+Lapa%2C+S%C3%A3o+Paulo" target="_blank" rel="noopener">Ver no mapa →</a>
+        </div>
+
+        <div class="unidade-card">
+          <span class="unidade-card__marca unidade-card__marca--vw">VW</span>
+          <h3>Volkswagen — Vendas</h3>
+          <p class="unidade-card__endereco">Av. Braz Leme, 295 — Casa Verde, São Paulo/SP — CEP 02511-000</p>
+          <div class="unidade-card__contatos">
+            <a href="tel:+551121415811">(11) 2141-5811</a>
+          </div>
+          <a class="unidade-card__mapa" href="https://www.google.com/maps/search/?api=1&query=Av.+Braz+Leme%2C+295%2C+Casa+Verde%2C+S%C3%A3o+Paulo" target="_blank" rel="noopener">Ver no mapa →</a>
+        </div>
+
+        <div class="unidade-card">
+          <span class="unidade-card__marca unidade-card__marca--vw">VW</span>
+          <h3>Volkswagen — Consórcio</h3>
+          <p class="unidade-card__endereco">Av. Braz Leme, 295 — Casa Verde, São Paulo/SP — CEP 02511-900</p>
+          <div class="unidade-card__contatos">
+            <a href="tel:+551121415800">(11) 2141-5800</a>
+          </div>
+          <a class="unidade-card__mapa" href="https://www.google.com/maps/search/?api=1&query=Av.+Braz+Leme%2C+295%2C+Casa+Verde%2C+S%C3%A3o+Paulo" target="_blank" rel="noopener">Ver no mapa →</a>
+        </div>
+
+        <div class="unidade-card">
+          <span class="unidade-card__marca unidade-card__marca--vw">VW</span>
+          <h3>Volkswagen — Serviços</h3>
+          <p class="unidade-card__endereco">R. Prof. Serpa Lopes, 88 — Casa Verde, São Paulo/SP — CEP 02510-050</p>
+          <div class="unidade-card__contatos">
+            <a href="https://wa.me/5511995250280" target="_blank" rel="noopener">WhatsApp (11) 99525-0280</a>
+            <a href="tel:+551121415844">(11) 2141-5844</a>
+          </div>
+          <a class="unidade-card__mapa" href="https://www.google.com/maps/search/?api=1&query=R.+Prof.+Serpa+Lopes%2C+88%2C+Casa+Verde%2C+S%C3%A3o+Paulo" target="_blank" rel="noopener">Ver no mapa →</a>
+        </div>
+
+        <div class="unidade-card">
+          <span class="unidade-card__marca unidade-card__marca--vw">VW</span>
+          <h3>Volkswagen — Peças &amp; Acessórios</h3>
+          <p class="unidade-card__endereco">R. Prof. Serpa Lopes, 192 — Casa Verde, São Paulo/SP — CEP 02510-050</p>
+          <div class="unidade-card__contatos">
+            <a href="tel:+551121415844">(11) 2141-5844</a>
+          </div>
+          <a class="unidade-card__mapa" href="https://www.google.com/maps/search/?api=1&query=R.+Prof.+Serpa+Lopes%2C+192%2C+Casa+Verde%2C+S%C3%A3o+Paulo" target="_blank" rel="noopener">Ver no mapa →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contato" id="contato">
+    <div class="container contato__inner">
+      <p class="eyebrow">Contato</p>
+      <h2>Vamos agendar sua visita?</h2>
+      <p class="contato__lead">
+        Conta pra gente qual marca te interessa e o que você procura —
+        um consultor retorna com as opções certas.
+      </p>
+
+      <div class="contato__cols">
+        <div class="contato__grid">
+          <a href="https://wa.me/5511913272977" class="contato__card" target="_blank" rel="noopener">
+            <span class="contato__label">Audi Vendas · WhatsApp</span>
+            <span class="contato__valor">(11) 91327-2977</span>
+          </a>
+          <a href="tel:+551137955811" class="contato__card">
+            <span class="contato__label">Audi Lapa · Telefone</span>
+            <span class="contato__valor">(11) 3795-5811</span>
+          </a>
+          <a href="tel:+551121415811" class="contato__card">
+            <span class="contato__label">Volkswagen · Vendas</span>
+            <span class="contato__valor">(11) 2141-5811</span>
+          </a>
+          <a href="https://wa.me/5511995250280" class="contato__card" target="_blank" rel="noopener">
+            <span class="contato__label">Volkswagen Serviços · WhatsApp</span>
+            <span class="contato__valor">(11) 99525-0280</span>
+          </a>
+        </div>
+
+        <form class="contato-form" id="contato-form">
+          <div class="contato-form__row">
+            <label>
+              <span>Nome</span>
+              <input type="text" name="nome" required placeholder="Seu nome">
+            </label>
+          </div>
+          <div class="contato-form__row contato-form__row--split">
+            <label>
+              <span>Marca de interesse</span>
+              <select name="marca" id="marca-select">
+                <option value="Audi">Audi</option>
+                <option value="Volkswagen">Volkswagen</option>
+                <option value="Ainda não sei">Ainda não sei</option>
+              </select>
+            </label>
+            <label>
+              <span>Telefone de contato</span>
+              <input type="text" name="telefone" required placeholder="(11) 90000-0000">
+            </label>
+          </div>
+          <div class="contato-form__row">
+            <label>
+              <span>O que você procura?</span>
+              <textarea name="mensagem" rows="3" placeholder="Ex: quero fazer um test-drive, revisar meu carro, saber do consórcio..."></textarea>
+            </label>
+          </div>
+          <button type="submit" class="btn btn--primary contato-form__submit">Enviar pelo WhatsApp</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <span class="logo logo--footer">
+      <span class="logo__main">GRUPO SORANA</span>
+      <span class="logo__sub">AUDI · VOLKSWAGEN</span>
+    </span>
+    <p>&copy; <span id="ano"></span> Grupo Sorana. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/5511913272977" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.02 3C9.4 3 4 8.37 4 15c0 2.25.62 4.36 1.7 6.17L4 29l8.03-1.65A11.96 11.96 0 0 0 16.02 27C22.64 27 28 21.63 28 15S22.64 3 16.02 3zm0 21.8c-1.98 0-3.83-.55-5.4-1.5l-.39-.23-4.13.85.87-4.03-.25-.4A9.7 9.7 0 0 1 5.3 15c0-5.9 4.8-10.7 10.72-10.7S26.74 9.1 26.74 15 22.94 24.8 16.02 24.8zm5.86-7.98c-.32-.16-1.9-.94-2.2-1.04-.3-.11-.5-.16-.72.16-.21.32-.82 1.04-1 1.25-.19.21-.37.24-.69.08-.32-.16-1.34-.5-2.55-1.58-.94-.84-1.58-1.87-1.76-2.19-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.55.16-.19.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.72-1.75-.99-2.39-.26-.63-.53-.54-.72-.55h-.62c-.21 0-.56.08-.85.4-.29.32-1.12 1.09-1.12 2.66s1.15 3.09 1.31 3.3c.16.21 2.26 3.46 5.48 4.85.77.33 1.36.53 1.83.68.77.24 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.53.27-.75.27-1.4.19-1.53-.08-.13-.29-.21-.61-.37z"/></svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
