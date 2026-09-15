@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Volkswagen — Grupo Sorana</title>
 <meta name="description" content="Volkswagen no Grupo Sorana — novos, seminovos, ofertas, serviços, acessórios, peças e consórcio na unidade Casa Verde, em São Paulo.">
+<link rel="canonical" href="https://gruposorana.vercel.app/volkswagen.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Grupo Sorana">
+<meta property="og:url" content="https://gruposorana.vercel.app/volkswagen.html">
+<meta property="og:title" content="Volkswagen — Grupo Sorana">
+<meta property="og:description" content="Volkswagen no Grupo Sorana — novos, seminovos, ofertas, serviços, acessórios, peças e consórcio na unidade Casa Verde.">
+<meta property="og:image" content="https://gruposorana.vercel.app/img/hero-vw-tiguan.webp">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -199,7 +208,10 @@
         Estoque selecionado, revisado e com garantia — a mesma exigência de
         qualidade que já rendeu à Sorana o prêmio Volante de Ouro.
       </p>
-      <a href="tel:+551121415811" class="btn btn--primary">Falar sobre seminovos</a>
+      <div class="frotas__actions">
+        <a href="https://wa.me/5511995250280?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20seminovos%20Volkswagen%20dispon%C3%ADveis." class="btn btn--primary" target="_blank" rel="noopener">Falar sobre seminovos</a>
+        <a href="tel:+551121415811" class="marca-card__tel">(11) 2141-5811</a>
+      </div>
     </div>
   </section>
 
@@ -211,7 +223,10 @@
         Fale com um consultor pra saber as condições vigentes de
         financiamento e as ofertas ativas na linha Volkswagen.
       </p>
-      <a href="tel:+551121415811" class="btn btn--primary">Consultar ofertas</a>
+      <div class="frotas__actions">
+        <a href="https://wa.me/5511995250280?text=Ol%C3%A1!%20Gostaria%20de%20saber%20as%20ofertas%20ativas%20na%20linha%20Volkswagen." class="btn btn--primary" target="_blank" rel="noopener">Consultar ofertas</a>
+        <a href="tel:+551121415811" class="marca-card__tel">(11) 2141-5811</a>
+      </div>
     </div>
   </section>
 
@@ -236,7 +251,10 @@
         Linha completa de acessórios genuínos, com a mesma garantia e
         qualidade de fábrica.
       </p>
-      <a href="tel:+551121415844" class="btn btn--primary">Falar com Peças VW</a>
+      <div class="frotas__actions">
+        <a href="https://wa.me/5511995250280?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20acess%C3%B3rios%20originais%20Volkswagen." class="btn btn--primary" target="_blank" rel="noopener">Falar com Peças VW</a>
+        <a href="tel:+551121415844" class="marca-card__tel">(11) 2141-5844</a>
+      </div>
     </div>
   </section>
 
@@ -248,7 +266,10 @@
         Reposição com peças originais Volkswagen, disponíveis direto na
         unidade Casa Verde.
       </p>
-      <a href="tel:+551121415844" class="btn btn--primary">Consultar peças</a>
+      <div class="frotas__actions">
+        <a href="https://wa.me/5511995250280?text=Ol%C3%A1!%20Gostaria%20de%20consultar%20pe%C3%A7as%20originais%20Volkswagen." class="btn btn--primary" target="_blank" rel="noopener">Consultar peças</a>
+        <a href="tel:+551121415844" class="marca-card__tel">(11) 2141-5844</a>
+      </div>
     </div>
   </section>
 
@@ -260,9 +281,64 @@
         Planos de consórcio Volkswagen pra quem quer entrar numa marca de
         confiança sem pressa — parcelas que cabem no bolso.
       </p>
-      <a href="tel:+551121415800" class="btn btn--primary">Falar sobre consórcio</a>
+      <div class="frotas__actions">
+        <a href="https://wa.me/5511995250280?text=Ol%C3%A1!%20Gostaria%20de%20saber%20sobre%20planos%20de%20cons%C3%B3rcio%20Volkswagen." class="btn btn--primary" target="_blank" rel="noopener">Falar sobre consórcio</a>
+        <a href="tel:+551121415800" class="marca-card__tel">(11) 2141-5800</a>
+      </div>
     </div>
   </section>
+
+  <section class="test-drive" id="test-drive">
+    <div class="container test-drive__inner">
+      <p class="eyebrow">Test-drive</p>
+      <h2>Sinta a diferença ao volante.</h2>
+      <p>Agende seu test-drive e conheça de perto seu próximo Volkswagen.</p>
+      <button type="button" class="btn btn--primary" data-dialog-open="dialog-test-drive">Agendar test-drive</button>
+    </div>
+  </section>
+
+  <dialog class="dialog" id="dialog-test-drive">
+    <button type="button" class="dialog-close" data-dialog-close aria-label="Fechar">&times;</button>
+    <h3>Agendar test-drive</h3>
+    <p class="dialog__lead">Escolhe o modelo — a gente confirma o horário no WhatsApp.</p>
+    <form class="dialog-form" id="form-test-drive">
+      <input type="hidden" name="marca" value="Volkswagen">
+      <label>
+        <span>Nome</span>
+        <input type="text" name="nome" required placeholder="Seu nome">
+      </label>
+      <div class="dialog-form__row dialog-form__row--split">
+        <label>
+          <span>WhatsApp</span>
+          <input type="text" name="whatsapp" required placeholder="(11) 90000-0000">
+        </label>
+        <label>
+          <span>Modelo desejado</span>
+          <input type="text" name="modelo" required placeholder="Ex: T-Cross, Nivus...">
+        </label>
+      </div>
+      <div class="dialog-form__row dialog-form__row--split">
+        <label>
+          <span>Unidade</span>
+          <select name="unidade">
+            <option>Volkswagen — Vendas (Casa Verde)</option>
+          </select>
+        </label>
+        <label>
+          <span>Melhor horário</span>
+          <select name="horario">
+            <option>Manhã</option>
+            <option>Tarde</option>
+            <option>Noite</option>
+          </select>
+        </label>
+      </div>
+      <div class="dialog-form__actions">
+        <button type="button" class="dialog-form__cancel" data-dialog-close>Cancelar</button>
+        <button type="submit" class="btn btn--primary dialog-form__submit">Agendar pelo WhatsApp</button>
+      </div>
+    </form>
+  </dialog>
 
   <section class="unidades" id="unidades-vw">
     <div class="container">

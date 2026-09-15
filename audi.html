@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Audi — Grupo Sorana</title>
 <meta name="description" content="Audi no Grupo Sorana — modelos, seminovos, vendas diretas, serviços e acessórios originais nas unidades Audi Lapa e Audi Center Pinheiros, em São Paulo.">
+<link rel="canonical" href="https://gruposorana.vercel.app/audi.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Grupo Sorana">
+<meta property="og:url" content="https://gruposorana.vercel.app/audi.html">
+<meta property="og:title" content="Audi — Grupo Sorana">
+<meta property="og:description" content="Audi no Grupo Sorana — modelos, seminovos, vendas diretas, serviços e acessórios originais nas unidades Audi Lapa e Audi Center Pinheiros.">
+<meta property="og:image" content="https://gruposorana.vercel.app/img/hero-audi-rsq8.webp">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -395,6 +404,59 @@
       <a href="quem-somos.html" class="sobre__link">Conhecer nossa história completa →</a>
     </div>
   </section>
+
+  <section class="test-drive" id="test-drive">
+    <div class="container test-drive__inner">
+      <p class="eyebrow">Test-drive</p>
+      <h2>Sinta a diferença ao volante.</h2>
+      <p>Agende seu test-drive e conheça de perto seu próximo Audi.</p>
+      <button type="button" class="btn btn--primary" data-dialog-open="dialog-test-drive">Agendar test-drive</button>
+    </div>
+  </section>
+
+  <dialog class="dialog" id="dialog-test-drive">
+    <button type="button" class="dialog-close" data-dialog-close aria-label="Fechar">&times;</button>
+    <h3>Agendar test-drive</h3>
+    <p class="dialog__lead">Escolhe o modelo e a unidade — a gente confirma o horário no WhatsApp.</p>
+    <form class="dialog-form" id="form-test-drive">
+      <input type="hidden" name="marca" value="Audi">
+      <label>
+        <span>Nome</span>
+        <input type="text" name="nome" required placeholder="Seu nome">
+      </label>
+      <div class="dialog-form__row dialog-form__row--split">
+        <label>
+          <span>WhatsApp</span>
+          <input type="text" name="whatsapp" required placeholder="(11) 90000-0000">
+        </label>
+        <label>
+          <span>Modelo desejado</span>
+          <input type="text" name="modelo" required placeholder="Ex: Q5, A3 Sedan...">
+        </label>
+      </div>
+      <div class="dialog-form__row dialog-form__row--split">
+        <label>
+          <span>Unidade</span>
+          <select name="unidade">
+            <option>Audi Center Pinheiros</option>
+            <option>Audi Lapa</option>
+          </select>
+        </label>
+        <label>
+          <span>Melhor horário</span>
+          <select name="horario">
+            <option>Manhã</option>
+            <option>Tarde</option>
+            <option>Noite</option>
+          </select>
+        </label>
+      </div>
+      <div class="dialog-form__actions">
+        <button type="button" class="dialog-form__cancel" data-dialog-close>Cancelar</button>
+        <button type="submit" class="btn btn--primary dialog-form__submit">Agendar pelo WhatsApp</button>
+      </div>
+    </form>
+  </dialog>
 
   <section class="unidades" id="unidades-audi">
     <div class="container">

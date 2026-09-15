@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Grupo Sorana — Audi e Volkswagen</title>
 <meta name="description" content="Grupo Sorana — concessionária multimarca Audi e Volkswagen em São Paulo desde 1968. Novos, seminovos, peças, serviços, consórcio e vendas diretas pra frotas.">
+<link rel="canonical" href="https://gruposorana.vercel.app/index.html">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Grupo Sorana">
+<meta property="og:url" content="https://gruposorana.vercel.app/index.html">
+<meta property="og:title" content="Grupo Sorana — Audi e Volkswagen em São Paulo">
+<meta property="og:description" content="Concessionária multimarca Audi e Volkswagen em São Paulo desde 1968. Novos, seminovos, ofertas, serviços, consórcio e vendas diretas pra frotas.">
+<meta property="og:image" content="https://gruposorana.vercel.app/img/hero-audi-rsq8.webp">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -91,6 +100,10 @@
         <a href="audi.html" class="btn btn--audi">Conhecer Audi</a>
         <a href="volkswagen.html" class="btn btn--vw">Conhecer Volkswagen</a>
       </div>
+      <div class="hero__actions-secondary">
+        <a href="#ofertas">Ver ofertas →</a>
+        <button type="button" data-dialog-open="dialog-test-drive">Agendar test-drive →</button>
+      </div>
       <p class="hero__proof">Desde 1968 no mercado automotivo de São Paulo.</p>
     </div>
   </section>
@@ -162,7 +175,10 @@
           <h3>A3 Sedan</h3>
           <p class="vitrine-card__meta">2026 · Sedan de entrada</p>
           <p class="vitrine-card__preco">A partir de <strong>R$ 314.990</strong></p>
-          <a href="novos/audi-a3-sedan.html" class="vitrine-card__link">Conhecer o modelo →</a>
+          <div class="vitrine-card__actions">
+            <a href="novos/audi-a3-sedan.html" class="vitrine-card__link">Conhecer o modelo →</a>
+            <a href="https://wa.me/5511913272977?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Audi%20A3%20Sedan%202026%20e%20gostaria%20de%20receber%20mais%20informa%C3%A7%C3%B5es." class="vitrine-card__interesse" target="_blank" rel="noopener">Tenho interesse</a>
+          </div>
         </article>
 
         <article class="vitrine-card vitrine-card--audi">
@@ -173,7 +189,10 @@
           <h3>Q5</h3>
           <p class="vitrine-card__meta">2026 · SUV médio</p>
           <p class="vitrine-card__preco">A partir de <strong>R$ 513.990</strong></p>
-          <a href="novos/audi-q5-2026.html" class="vitrine-card__link">Conhecer o modelo →</a>
+          <div class="vitrine-card__actions">
+            <a href="novos/audi-q5-2026.html" class="vitrine-card__link">Conhecer o modelo →</a>
+            <a href="https://wa.me/5511913272977?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Audi%20Q5%202026%20e%20gostaria%20de%20receber%20mais%20informa%C3%A7%C3%B5es." class="vitrine-card__interesse" target="_blank" rel="noopener">Tenho interesse</a>
+          </div>
         </article>
 
         <article class="vitrine-card vitrine-card--audi">
@@ -184,7 +203,10 @@
           <h3>Q8</h3>
           <p class="vitrine-card__meta">2026 · SUV coupé topo de linha</p>
           <p class="vitrine-card__preco">A partir de <strong>R$ 819.990</strong></p>
-          <a href="novos/audi-q8.html" class="vitrine-card__link">Conhecer o modelo →</a>
+          <div class="vitrine-card__actions">
+            <a href="novos/audi-q8.html" class="vitrine-card__link">Conhecer o modelo →</a>
+            <a href="https://wa.me/5511913272977?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Audi%20Q8%202026%20e%20gostaria%20de%20receber%20mais%20informa%C3%A7%C3%B5es." class="vitrine-card__interesse" target="_blank" rel="noopener">Tenho interesse</a>
+          </div>
         </article>
 
         <article class="vitrine-card vitrine-card--vw">
@@ -195,7 +217,10 @@
           <h3>T-Cross</h3>
           <p class="vitrine-card__meta">2026 · SUV compacto mais vendido do Brasil</p>
           <p class="vitrine-card__preco">A partir de <strong>R$ 123.990</strong></p>
-          <a href="novos-vw/vw-t-cross-2026.html" class="vitrine-card__link">Conhecer o modelo →</a>
+          <div class="vitrine-card__actions">
+            <a href="novos-vw/vw-t-cross-2026.html" class="vitrine-card__link">Conhecer o modelo →</a>
+            <a href="https://wa.me/5511995250280?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Volkswagen%20T-Cross%202026%20e%20gostaria%20de%20receber%20mais%20informa%C3%A7%C3%B5es." class="vitrine-card__interesse" target="_blank" rel="noopener">Tenho interesse</a>
+          </div>
         </article>
 
         <article class="vitrine-card vitrine-card--vw">
@@ -206,7 +231,10 @@
           <h3>Nivus</h3>
           <p class="vitrine-card__meta">2026 · SUV coupé compacto</p>
           <p class="vitrine-card__preco">A partir de <strong>R$ 140.590</strong></p>
-          <a href="novos-vw/vw-nivus-2026.html" class="vitrine-card__link">Conhecer o modelo →</a>
+          <div class="vitrine-card__actions">
+            <a href="novos-vw/vw-nivus-2026.html" class="vitrine-card__link">Conhecer o modelo →</a>
+            <a href="https://wa.me/5511995250280?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Volkswagen%20Nivus%202026%20e%20gostaria%20de%20receber%20mais%20informa%C3%A7%C3%B5es." class="vitrine-card__interesse" target="_blank" rel="noopener">Tenho interesse</a>
+          </div>
         </article>
 
         <article class="vitrine-card vitrine-card--vw">
@@ -217,7 +245,10 @@
           <h3>Taos</h3>
           <p class="vitrine-card__meta">2026 · SUV médio</p>
           <p class="vitrine-card__preco">A partir de <strong>R$ 177.990</strong></p>
-          <a href="novos-vw/vw-taos.html" class="vitrine-card__link">Conhecer o modelo →</a>
+          <div class="vitrine-card__actions">
+            <a href="novos-vw/vw-taos.html" class="vitrine-card__link">Conhecer o modelo →</a>
+            <a href="https://wa.me/5511995250280?text=Ol%C3%A1!%20Tenho%20interesse%20no%20Volkswagen%20Taos%202026%20e%20gostaria%20de%20receber%20mais%20informa%C3%A7%C3%B5es." class="vitrine-card__interesse" target="_blank" rel="noopener">Tenho interesse</a>
+          </div>
         </article>
 
       </div>
@@ -225,6 +256,126 @@
       <div class="vitrine__foot">
         <a href="audi.html#novos" class="btn btn--ghost">Ver linha completa Audi →</a>
         <a href="volkswagen.html#novos" class="btn btn--ghost">Ver linha completa Volkswagen →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="seminovos" id="seminovos">
+    <div class="container">
+      <div class="vitrine__head">
+        <div>
+          <p class="eyebrow">Seminovos</p>
+          <h2>Encontre seu próximo seminovo.</h2>
+        </div>
+        <p class="vitrine__lead">Veículos selecionados, revisados e com a confiança do Grupo Sorana.</p>
+      </div>
+      <p class="section-aviso">Cards de exemplo pra mostrar o formato — a vitrine real é conectada ao estoque de seminovos vigente do Grupo Sorana antes de publicar.</p>
+
+      <div class="seminovos-grid">
+
+        <article class="seminovo-card">
+          <span class="ribbon">Amostra</span>
+          <div class="seminovo-card__foto">
+            <img src="novos/img/audi-a3-sedan.webp" alt="Audi A3 Sedan seminovo — foto de exemplo" loading="lazy">
+          </div>
+          <h3>Audi A3 Sedan</h3>
+          <ul class="seminovo-card__specs">
+            <li>Ano<strong>Exemplo</strong></li>
+            <li>KM<strong>Exemplo</strong></li>
+            <li>Câmbio<strong>Automático</strong></li>
+            <li>Combustível<strong>Flex</strong></li>
+          </ul>
+          <p class="seminovo-card__preco">Sob consulta</p>
+          <div class="vitrine-card__actions">
+            <a href="https://wa.me/5511913272977?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20seminovos%20Audi%20dispon%C3%ADveis." class="vitrine-card__link" target="_blank" rel="noopener">Ver veículo →</a>
+            <a href="https://wa.me/5511913272977?text=Ol%C3%A1!%20Tenho%20interesse%20neste%20seminovo%20e%20gostaria%20de%20saber%20se%20ele%20ainda%20est%C3%A1%20dispon%C3%ADvel." class="vitrine-card__interesse" target="_blank" rel="noopener">Tenho interesse</a>
+          </div>
+        </article>
+
+        <article class="seminovo-card">
+          <span class="ribbon">Amostra</span>
+          <div class="seminovo-card__foto">
+            <img src="novos/img/audi-q5-2025.webp" alt="Audi Q5 seminovo — foto de exemplo" loading="lazy">
+          </div>
+          <h3>Audi Q5</h3>
+          <ul class="seminovo-card__specs">
+            <li>Ano<strong>Exemplo</strong></li>
+            <li>KM<strong>Exemplo</strong></li>
+            <li>Câmbio<strong>Automático</strong></li>
+            <li>Combustível<strong>Flex</strong></li>
+          </ul>
+          <p class="seminovo-card__preco">Sob consulta</p>
+          <div class="vitrine-card__actions">
+            <a href="https://wa.me/5511913272977?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20seminovos%20Audi%20dispon%C3%ADveis." class="vitrine-card__link" target="_blank" rel="noopener">Ver veículo →</a>
+            <a href="https://wa.me/5511913272977?text=Ol%C3%A1!%20Tenho%20interesse%20neste%20seminovo%20e%20gostaria%20de%20saber%20se%20ele%20ainda%20est%C3%A1%20dispon%C3%ADvel." class="vitrine-card__interesse" target="_blank" rel="noopener">Tenho interesse</a>
+          </div>
+        </article>
+
+        <article class="seminovo-card">
+          <span class="ribbon">Amostra</span>
+          <div class="seminovo-card__foto">
+            <img src="novos-vw/img/vw-t-cross-2026.webp" alt="Volkswagen T-Cross seminovo — foto de exemplo" loading="lazy">
+          </div>
+          <h3>Volkswagen T-Cross</h3>
+          <ul class="seminovo-card__specs">
+            <li>Ano<strong>Exemplo</strong></li>
+            <li>KM<strong>Exemplo</strong></li>
+            <li>Câmbio<strong>Automático</strong></li>
+            <li>Combustível<strong>Flex</strong></li>
+          </ul>
+          <p class="seminovo-card__preco">Sob consulta</p>
+          <div class="vitrine-card__actions">
+            <a href="https://wa.me/5511995250280?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20seminovos%20Volkswagen%20dispon%C3%ADveis." class="vitrine-card__link" target="_blank" rel="noopener">Ver veículo →</a>
+            <a href="https://wa.me/5511995250280?text=Ol%C3%A1!%20Tenho%20interesse%20neste%20seminovo%20e%20gostaria%20de%20saber%20se%20ele%20ainda%20est%C3%A1%20dispon%C3%ADvel." class="vitrine-card__interesse" target="_blank" rel="noopener">Tenho interesse</a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="vitrine__foot">
+        <a href="https://wa.me/5511913272977?text=Ol%C3%A1!%20Gostaria%20de%20ver%20todos%20os%20seminovos%20dispon%C3%ADveis%20no%20Grupo%20Sorana." class="btn btn--outline" target="_blank" rel="noopener">Ver todos os seminovos →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="ofertas" id="ofertas">
+    <div class="container">
+      <div class="vitrine__head">
+        <div>
+          <p class="eyebrow">Comercial</p>
+          <h2>Ofertas especiais</h2>
+        </div>
+        <p class="vitrine__lead">Condições em destaque neste mês — fale com um consultor pra saber o que está disponível agora.</p>
+      </div>
+      <p class="section-aviso">Estrutura de exemplo — valores de entrada, parcela e condições reais são definidos pela equipe comercial do Grupo Sorana.</p>
+
+      <div class="ofertas-grid">
+
+        <article class="oferta-card oferta-card--audi">
+          <span class="oferta-card__marca">Audi</span>
+          <h3>A3 Sedan 2026</h3>
+          <p>Condições especiais de entrada e parcelamento neste mês. Consulte com um consultor Audi.</p>
+          <a href="https://wa.me/5511913272977?text=Ol%C3%A1!%20Vi%20a%20oferta%20do%20Audi%20A3%20Sedan%20no%20site%20e%20quero%20saber%20as%20condi%C3%A7%C3%B5es." class="btn btn--ghost" target="_blank" rel="noopener">Falar no WhatsApp</a>
+        </article>
+
+        <article class="oferta-card oferta-card--vw">
+          <span class="oferta-card__marca">Volkswagen</span>
+          <h3>T-Cross 2026</h3>
+          <p>Condições especiais de entrada e parcelamento neste mês. Consulte com um consultor Volkswagen.</p>
+          <a href="https://wa.me/5511995250280?text=Ol%C3%A1!%20Vi%20a%20oferta%20do%20Volkswagen%20T-Cross%20no%20site%20e%20quero%20saber%20as%20condi%C3%A7%C3%B5es." class="btn btn--ghost" target="_blank" rel="noopener">Falar no WhatsApp</a>
+        </article>
+
+        <article class="oferta-card oferta-card--vw">
+          <span class="oferta-card__marca">Volkswagen</span>
+          <h3>Nivus 2026</h3>
+          <p>Condições especiais de entrada e parcelamento neste mês. Consulte com um consultor Volkswagen.</p>
+          <a href="https://wa.me/5511995250280?text=Ol%C3%A1!%20Vi%20a%20oferta%20do%20Volkswagen%20Nivus%20no%20site%20e%20quero%20saber%20as%20condi%C3%A7%C3%B5es." class="btn btn--ghost" target="_blank" rel="noopener">Falar no WhatsApp</a>
+        </article>
+
+      </div>
+
+      <div class="vitrine__foot">
+        <a href="https://wa.me/5511913272977?text=Ol%C3%A1!%20Gostaria%20de%20ver%20todas%20as%20ofertas%20dispon%C3%ADveis%20no%20Grupo%20Sorana." class="btn btn--outline" target="_blank" rel="noopener">Ver todas as ofertas →</a>
       </div>
     </div>
   </section>
@@ -265,14 +416,196 @@
     </div>
   </section>
 
+  <section class="avalie" id="avalie-seu-usado">
+    <div class="container avalie__inner">
+      <div>
+        <p class="eyebrow">Avalie seu usado</p>
+        <h2>Seu carro pode valer mais na Sorana.</h2>
+        <p class="avalie__lead">Avalie seu veículo e descubra as possibilidades de troca por um novo ou seminovo.</p>
+        <button type="button" class="btn btn--primary" data-dialog-open="dialog-avaliar">Avaliar meu carro</button>
+      </div>
+      <ul class="avalie-vantagens">
+        <li>Avaliação sem compromisso, com um consultor Sorana</li>
+        <li>Possibilidade de troca por novo ou seminovo</li>
+        <li>Atendimento nas unidades Audi e Volkswagen do grupo</li>
+      </ul>
+    </div>
+  </section>
+
+  <dialog class="dialog" id="dialog-avaliar">
+    <button type="button" class="dialog-close" data-dialog-close aria-label="Fechar">&times;</button>
+    <h3>Avaliar meu carro</h3>
+    <p class="dialog__lead">Preenche os dados do seu veículo — a gente confirma os detalhes direto no WhatsApp.</p>
+    <form class="dialog-form" id="form-avaliar">
+      <label>
+        <span>Nome</span>
+        <input type="text" name="nome" required placeholder="Seu nome">
+      </label>
+      <div class="dialog-form__row dialog-form__row--split">
+        <label>
+          <span>WhatsApp</span>
+          <input type="text" name="whatsapp" required placeholder="(11) 90000-0000">
+        </label>
+        <label>
+          <span>Cidade</span>
+          <input type="text" name="cidade" placeholder="Sua cidade">
+        </label>
+      </div>
+      <div class="dialog-form__row dialog-form__row--split">
+        <label>
+          <span>Marca</span>
+          <input type="text" name="marcaVeiculo" required placeholder="Ex: Audi, Volkswagen...">
+        </label>
+        <label>
+          <span>Modelo</span>
+          <input type="text" name="modeloVeiculo" required placeholder="Ex: A3 Sedan">
+        </label>
+      </div>
+      <div class="dialog-form__row dialog-form__row--split">
+        <label>
+          <span>Ano</span>
+          <input type="text" name="ano" placeholder="Ex: 2020">
+        </label>
+        <label>
+          <span>Quilometragem</span>
+          <input type="text" name="km" placeholder="Ex: 42.000 km">
+        </label>
+      </div>
+      <label>
+        <span>Observações</span>
+        <textarea name="observacoes" rows="3" placeholder="Estado de conservação, itens extras, o que procura na troca..."></textarea>
+      </label>
+      <label>
+        <span>Foto do veículo (opcional)</span>
+        <input type="file" name="foto" accept="image/*">
+      </label>
+      <p class="dialog-form__hint">A foto não é enviada por aqui — depois de abrir o WhatsApp, é só anexar direto na conversa.</p>
+      <div class="dialog-form__actions">
+        <button type="button" class="dialog-form__cancel" data-dialog-close>Cancelar</button>
+        <button type="submit" class="btn btn--primary dialog-form__submit">Enviar pelo WhatsApp</button>
+      </div>
+    </form>
+  </dialog>
+
+  <section class="test-drive" id="test-drive">
+    <div class="container test-drive__inner">
+      <p class="eyebrow">Test-drive</p>
+      <h2>Sinta a diferença ao volante.</h2>
+      <p>Agende seu test-drive e conheça de perto seu próximo Audi ou Volkswagen.</p>
+      <button type="button" class="btn btn--primary" data-dialog-open="dialog-test-drive">Agendar test-drive</button>
+    </div>
+  </section>
+
+  <dialog class="dialog" id="dialog-test-drive">
+    <button type="button" class="dialog-close" data-dialog-close aria-label="Fechar">&times;</button>
+    <h3>Agendar test-drive</h3>
+    <p class="dialog__lead">Escolhe a marca e a unidade — a gente confirma o horário no WhatsApp.</p>
+    <form class="dialog-form" id="form-test-drive">
+      <label>
+        <span>Nome</span>
+        <input type="text" name="nome" required placeholder="Seu nome">
+      </label>
+      <div class="dialog-form__row dialog-form__row--split">
+        <label>
+          <span>WhatsApp</span>
+          <input type="text" name="whatsapp" required placeholder="(11) 90000-0000">
+        </label>
+        <label>
+          <span>Marca</span>
+          <select name="marca" id="test-drive-marca">
+            <option value="Audi">Audi</option>
+            <option value="Volkswagen">Volkswagen</option>
+          </select>
+        </label>
+      </div>
+      <div class="dialog-form__row dialog-form__row--split">
+        <label>
+          <span>Modelo desejado</span>
+          <input type="text" name="modelo" required placeholder="Ex: Q5, T-Cross...">
+        </label>
+        <label>
+          <span>Unidade</span>
+          <select name="unidade">
+            <option>Audi Center Pinheiros</option>
+            <option>Audi Lapa</option>
+            <option>Volkswagen — Vendas (Casa Verde)</option>
+          </select>
+        </label>
+      </div>
+      <label>
+        <span>Melhor horário</span>
+        <select name="horario">
+          <option>Manhã</option>
+          <option>Tarde</option>
+          <option>Noite</option>
+        </select>
+      </label>
+      <div class="dialog-form__actions">
+        <button type="button" class="dialog-form__cancel" data-dialog-close>Cancelar</button>
+        <button type="submit" class="btn btn--primary dialog-form__submit">Agendar pelo WhatsApp</button>
+      </div>
+    </form>
+  </dialog>
+
+  <section class="servicos" id="servicos">
+    <div class="container">
+      <p class="eyebrow">Serviços</p>
+      <h2>Seu carro sempre em boas mãos.</h2>
+
+      <div class="servicos-grid">
+
+        <article class="servicos-col servicos-col--audi">
+          <span class="servicos-col__marca">Audi</span>
+          <ul class="servicos-col__lista">
+            <li>Revisões</li>
+            <li>Oficina</li>
+            <li>Peças originais</li>
+            <li>Funilaria e pintura</li>
+            <li>Audi Service Express</li>
+            <li>Audi Mobile Service</li>
+            <li>Garantia estendida</li>
+          </ul>
+          <div class="servicos-col__actions">
+            <a href="audi.html#servicos" class="btn btn--ghost">Conhecer serviços →</a>
+            <a href="https://wa.me/5511913272977?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20servi%C3%A7o%20para%20meu%20ve%C3%ADculo%20Audi." class="servicos-col__agendar" target="_blank" rel="noopener">Agendar serviço →</a>
+          </div>
+        </article>
+
+        <article class="servicos-col servicos-col--vw">
+          <span class="servicos-col__marca">Volkswagen</span>
+          <ul class="servicos-col__lista">
+            <li>Revisões</li>
+            <li>Oficina</li>
+            <li>Peças originais</li>
+            <li>Funilaria e pintura</li>
+            <li>Acessórios</li>
+            <li>Car Care</li>
+          </ul>
+          <div class="servicos-col__actions">
+            <a href="volkswagen.html#servicos" class="btn btn--ghost">Conhecer serviços →</a>
+            <a href="https://wa.me/5511995250280?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20um%20servi%C3%A7o%20para%20meu%20ve%C3%ADculo%20Volkswagen." class="servicos-col__agendar" target="_blank" rel="noopener">Agendar serviço →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
   <section class="frotas frotas--banner" id="frotas">
     <div class="container frotas__banner-inner">
       <p class="eyebrow">Vendas diretas</p>
       <h2>Sua empresa precisa de uma frota à altura?</h2>
       <p class="frotas__banner-lead">Condições especiais para empresas, frotistas e locadoras — negociação direta com um consultor dedicado.</p>
+      <div class="frotas__banner-tags">
+        <span class="pill">Empresas</span>
+        <span class="pill">Frotistas</span>
+        <span class="pill">CNPJ</span>
+        <span class="pill">Motoristas profissionais</span>
+        <span class="pill">Vendas diretas</span>
+      </div>
       <div class="frotas__actions">
         <a href="https://wa.me/5511913272977?text=Ol%C3%A1!%20Tenho%20interesse%20em%20vendas%20diretas%20para%20frota%2Flocadora." class="btn btn--primary" target="_blank" rel="noopener">Falar com consultor</a>
-        <a href="vendas-diretas.html" class="frotas__banner-link">Ver programa completo →</a>
+        <a href="vendas-diretas.html" class="frotas__banner-link">Conhecer soluções para empresas →</a>
       </div>
     </div>
   </section>

@@ -137,3 +137,80 @@ if (form) {
     window.open(`https://wa.me/${numero}?text=${mensagem}`, '_blank', 'noopener');
   });
 }
+
+// Diálogos (avaliar usado / test-drive) — abrir, fechar, enviar pelo WhatsApp
+document.querySelectorAll('[data-dialog-open]').forEach((trigger) => {
+  trigger.addEventListener('click', () => {
+    const dialog = document.getElementById(trigger.dataset.dialogOpen);
+    dialog?.showModal();
+  });
+});
+
+document.querySelectorAll('.dialog').forEach((dialog) => {
+  dialog.querySelectorAll('[data-dialog-close]').forEach((btn) => {
+    btn.addEventListener('click', () => dialog.close());
+  });
+
+  // Fecha ao clicar fora (no backdrop) — clique no próprio <dialog> só acontece
+  // fora da caixa de conteúdo, já que o form cobre a área interna.
+  dialog.addEventListener('click', (event) => {
+    if (event.target === dialog) dialog.close();
+  });
+});
+
+const enviarPeloWhatsapp = (form, numero, linhas) => {
+  const submitBtn = form.querySelector('.dialog-form__submit');
+  const textoOriginal = submitBtn.textContent;
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Abrindo WhatsApp...';
+
+  const mensagem = encodeURIComponent(linhas.filter(Boolean).join('\n'));
+  window.open(`https://wa.me/${numero}?text=${mensagem}`, '_blank', 'noopener');
+
+  setTimeout(() => {
+    submitBtn.disabled = false;
+    submitBtn.textContent = textoOriginal;
+    form.closest('dialog')?.close();
+    form.reset();
+  }, 500);
+};
+
+const formAvaliar = document.getElementById('form-avaliar');
+
+if (formAvaliar) {
+  formAvaliar.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const data = new FormData(formAvaliar);
+
+    enviarPeloWhatsapp(formAvaliar, WHATSAPP_AUDI, [
+      'Olá! Gostaria de avaliar meu carro pra troca por um novo ou seminovo na Sorana.',
+      `Nome: ${data.get('nome')}`,
+      `WhatsApp: ${data.get('whatsapp')}`,
+      `Veículo: ${data.get('marcaVeiculo')} ${data.get('modeloVeiculo')}`,
+      data.get('ano') ? `Ano: ${data.get('ano')}` : '',
+      data.get('km') ? `Quilometragem: ${data.get('km')}` : '',
+      data.get('cidade') ? `Cidade: ${data.get('cidade')}` : '',
+      data.get('observacoes') ? `Observações: ${data.get('observacoes')}` : '',
+    ]);
+  });
+}
+
+const formTestDrive = document.getElementById('form-test-drive');
+
+if (formTestDrive) {
+  formTestDrive.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const data = new FormData(formTestDrive);
+    const marca = data.get('marca');
+    const numero = marca === 'Volkswagen' ? WHATSAPP_VW : WHATSAPP_AUDI;
+
+    enviarPeloWhatsapp(formTestDrive, numero, [
+      `Olá! Gostaria de agendar um test-drive de ${marca} — ${data.get('modelo')}.`,
+      `Nome: ${data.get('nome')}`,
+      `WhatsApp: ${data.get('whatsapp')}`,
+      `Unidade: ${data.get('unidade')}`,
+      `Melhor horário: ${data.get('horario')}`,
+    ]);
+  });
+}

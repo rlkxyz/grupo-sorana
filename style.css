@@ -1103,6 +1103,14 @@ p { margin: 0 0 1em; color: var(--muted); }
   margin-bottom: 8px;
 }
 
+.frotas__banner-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
 .frotas__banner-inner .frotas__actions {
   justify-content: center;
   align-items: center;
@@ -1115,6 +1123,451 @@ p { margin: 0 0 1em; color: var(--muted); }
   font-weight: 600;
   color: var(--primary-light);
 }
+
+/* Selo "amostra" / "oferta do mês" — usado em cards de exemplo */
+.ribbon {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-family: var(--font-title);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(245, 245, 245, 0.1);
+  color: var(--white);
+  border: 1px solid rgba(245, 245, 245, 0.22);
+}
+
+.section-aviso {
+  margin: 24px 0 12px;
+  font-size: 0.8rem;
+  color: var(--muted);
+  max-width: 62ch;
+}
+
+/* Vitrine — CTA duplo (Conhecer modelo / Tenho interesse) */
+.vitrine-card__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.vitrine-card__interesse {
+  font-family: var(--font-title);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--muted);
+  border-bottom: 1px solid transparent;
+}
+
+.vitrine-card__interesse:hover { color: var(--white); border-color: currentColor; }
+
+/* Hero — CTAs secundários (ofertas / test-drive) */
+.hero__actions-secondary {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.hero__actions-secondary a,
+.hero__actions-secondary button {
+  font-family: var(--font-title);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--white);
+  opacity: 0.85;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.hero__actions-secondary a:hover,
+.hero__actions-secondary button:hover { opacity: 1; color: var(--primary-light); }
+
+/* Seminovos */
+.seminovos { padding: 100px 0; border-bottom: 1px solid var(--border); }
+
+.seminovos-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.seminovo-card {
+  position: relative;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 22px 26px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.seminovo-card:hover { transform: translateY(-3px); border-color: var(--primary-light); }
+
+.seminovo-card__foto {
+  height: 170px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 60%, rgba(245, 245, 245, 0.08), rgba(245, 245, 245, 0.02) 70%);
+  filter: grayscale(0.15);
+}
+
+.seminovo-card__foto img { width: 100%; height: 100%; object-fit: contain; }
+
+.seminovo-card h3 { font-size: 1.1rem; color: var(--white); margin-bottom: 12px; }
+
+.seminovo-card__specs {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 14px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 12px;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.seminovo-card__specs strong { display: block; color: var(--white); font-weight: 600; }
+
+.seminovo-card__preco {
+  font-family: var(--font-title);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+/* Ofertas */
+.ofertas { padding: 100px 0; border-bottom: 1px solid var(--border); }
+
+.ofertas-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.oferta-card {
+  position: relative;
+  background: linear-gradient(160deg, var(--bg-alt), var(--bg));
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px 24px;
+}
+
+.oferta-card__marca {
+  display: inline-block;
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+
+.oferta-card--audi .oferta-card__marca { background: rgba(200, 16, 46, 0.15); color: var(--audi-light); }
+.oferta-card--vw .oferta-card__marca { background: rgba(13, 71, 161, 0.2); color: var(--vw-light); }
+
+.oferta-card h3 { font-size: 1.2rem; color: var(--white); margin-bottom: 10px; }
+
+.oferta-card p { font-size: 0.88rem; margin: 0 0 20px; }
+
+/* Avalie seu usado */
+.avalie { padding: 100px 0; border-bottom: 1px solid var(--border); }
+
+.avalie__inner {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.avalie h2 { font-size: clamp(1.7rem, 3.4vw, 2.3rem); }
+
+.avalie__lead { font-size: 1rem; max-width: 46ch; }
+
+.avalie-vantagens {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.avalie-vantagens li {
+  font-size: 0.95rem;
+  color: var(--white);
+  opacity: 0.85;
+  padding-left: 22px;
+  position: relative;
+}
+
+.avalie-vantagens li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--primary-light);
+}
+
+/* Test-drive (banner) */
+.test-drive {
+  padding: 90px 0;
+  position: relative;
+  text-align: center;
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--border);
+}
+
+.test-drive::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--vw), var(--audi));
+}
+
+.test-drive__inner {
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.test-drive .eyebrow { text-align: center; }
+.test-drive h2 { font-size: clamp(1.7rem, 3.4vw, 2.3rem); }
+.test-drive p { font-size: 1rem; max-width: 46ch; }
+
+/* Serviços */
+.servicos { padding: 100px 0; border-bottom: 1px solid var(--border); }
+
+.servicos h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); max-width: 560px; }
+
+.servicos-grid {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.servicos-col {
+  border-radius: var(--radius);
+  padding: 32px;
+  border: 1px solid var(--border);
+  background: var(--bg-alt);
+  position: relative;
+  overflow: hidden;
+}
+
+.servicos-col::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+}
+
+.servicos-col--audi::before { background: linear-gradient(90deg, var(--audi), var(--audi-light)); }
+.servicos-col--vw::before { background: linear-gradient(90deg, var(--vw), var(--vw-light)); }
+
+.servicos-col__marca {
+  display: block;
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.servicos-col__lista {
+  list-style: none;
+  margin: 0 0 28px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 16px;
+}
+
+.servicos-col__lista li {
+  font-size: 0.9rem;
+  color: var(--white);
+  opacity: 0.85;
+  padding-left: 16px;
+  position: relative;
+}
+
+.servicos-col__lista li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.servicos-col--audi .servicos-col__lista li::before { background: var(--audi-light); }
+.servicos-col--vw .servicos-col__lista li::before { background: var(--vw-light); }
+
+.servicos-col__actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.servicos-col__agendar {
+  font-family: var(--font-title);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary-light);
+}
+
+/* Diálogos (avaliar usado / test-drive) */
+.dialog {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-alt);
+  color: var(--white);
+  padding: 32px;
+  width: min(560px, calc(100vw - 48px));
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+}
+
+.dialog::backdrop {
+  background: rgba(11, 11, 13, 0.75);
+  backdrop-filter: blur(3px);
+}
+
+.dialog h3 {
+  font-size: 1.3rem;
+  color: var(--white);
+  margin-bottom: 6px;
+}
+
+.dialog__lead {
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+
+.dialog-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dialog-form__row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dialog-form__row--split {
+  flex-direction: row;
+}
+
+.dialog-form__row--split > label { flex: 1; }
+
+.dialog-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.dialog-form input,
+.dialog-form select,
+.dialog-form textarea {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--white);
+  background: rgba(245, 245, 245, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.dialog-form input:focus,
+.dialog-form select:focus,
+.dialog-form textarea:focus {
+  outline: none;
+  border-color: var(--primary-light);
+}
+
+.dialog-form__hint {
+  font-size: 0.76rem;
+  color: var(--muted);
+  margin: -8px 0 0;
+}
+
+.dialog-form__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.dialog-form__cancel {
+  font-family: var(--font-title);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.dialog-form__cancel:hover { color: var(--white); }
+
+.dialog-form__submit[disabled] { opacity: 0.6; cursor: default; }
+
+.dialog-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: none;
+  color: var(--white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.dialog-close:hover { border-color: var(--primary-light); }
 
 /* Unidades */
 .unidades { padding: 100px 0; border-bottom: 1px solid var(--border); }
@@ -1599,6 +2052,10 @@ p { margin: 0 0 1em; color: var(--muted); }
   .modelos-grid { grid-template-columns: repeat(2, 1fr); }
   .vitrine-grid { grid-template-columns: repeat(2, 1fr); }
   .vitrine__head { flex-direction: column; align-items: flex-start; }
+  .seminovos-grid { grid-template-columns: repeat(2, 1fr); }
+  .ofertas-grid { grid-template-columns: repeat(2, 1fr); }
+  .avalie__inner { grid-template-columns: 1fr; gap: 40px; }
+  .servicos-grid { grid-template-columns: 1fr; }
   .cards-grid { grid-template-columns: repeat(2, 1fr); }
   .contato__cols { grid-template-columns: 1fr; }
   .ficha-panel { columns: 1; }
@@ -1678,6 +2135,11 @@ p { margin: 0 0 1em; color: var(--muted); }
   .modelos-grid { grid-template-columns: 1fr; }
   .cards-grid { grid-template-columns: 1fr; }
   .vitrine-grid { grid-template-columns: 1fr; }
+  .seminovos-grid { grid-template-columns: 1fr; }
+  .ofertas-grid { grid-template-columns: 1fr; }
+  .servicos-col__lista { grid-template-columns: 1fr; }
+  .dialog-form__row--split { flex-direction: column; }
+  .hero__actions-secondary { flex-direction: column; gap: 12px; }
 
   .contato__grid { grid-template-columns: 1fr; }
   .contato-form__row--split { flex-direction: column; }
