@@ -331,148 +331,14 @@ p { margin: 0 0 1em; color: var(--muted); }
   color: rgba(245, 245, 245, 0.06);
 }
 
-/* Hero slider (fotos) */
-.hero__slider {
+/* Hero — foto de fundo (home) */
+.hero__photo-overlay {
   position: absolute;
   inset: 0;
   z-index: 0;
-  overflow: hidden;
-}
-
-.hero__slide {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-
-.hero__slide.is-active { opacity: 1; }
-
-.hero__slider-overlay {
-  position: absolute;
-  inset: 0;
   background:
-    linear-gradient(100deg, rgba(11, 11, 13, 0.94) 0%, rgba(11, 11, 13, 0.75) 38%, rgba(11, 11, 13, 0.35) 68%, rgba(11, 11, 13, 0.15) 100%),
+    linear-gradient(100deg, rgba(11, 11, 13, 0.97) 0%, rgba(11, 11, 13, 0.88) 32%, rgba(11, 11, 13, 0.55) 62%, rgba(11, 11, 13, 0.2) 100%),
     linear-gradient(to top, rgba(11, 11, 13, 0.9) 0%, transparent 45%);
-}
-
-.hero__arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  background: rgba(11, 11, 13, 0.5);
-  border: 1px solid rgba(245, 245, 245, 0.25);
-  color: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background 0.2s, border-color 0.2s;
-  backdrop-filter: blur(4px);
-}
-
-.hero__arrow svg { width: 20px; height: 20px; }
-
-.hero__arrow:hover { background: rgba(11, 11, 13, 0.8); border-color: var(--primary-light); }
-
-.hero__arrow--prev { left: 20px; }
-.hero__arrow--next { right: 20px; }
-
-.hero__dots {
-  position: absolute;
-  bottom: 28px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  display: flex;
-  gap: 8px;
-}
-
-.hero__dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: rgba(245, 245, 245, 0.3);
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
-}
-
-.hero__dot.is-active { background: var(--primary-light); transform: scale(1.2); }
-
-/* Hero — painel promocional por marca (troca junto com o slide) */
-.hero__promo {
-  position: absolute;
-  z-index: 2;
-  right: 28px;
-  bottom: 66px;
-  width: clamp(260px, 30vw, 380px);
-}
-
-.hero__promo-slide {
-  position: absolute;
-  inset: auto 0 0 auto;
-  width: 100%;
-  padding: 22px 24px;
-  border-radius: var(--radius);
-  border: 1px solid rgba(245, 245, 245, 0.14);
-  background: rgba(11, 11, 13, 0.72);
-  backdrop-filter: blur(10px);
-  opacity: 0;
-  transform: translateY(8px);
-  pointer-events: none;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.hero__promo-slide.is-active {
-  position: relative;
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-.hero__promo-brand {
-  display: inline-block;
-  font-family: var(--font-title);
-  font-weight: 700;
-  font-size: 0.7rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 4px 10px;
-  border-radius: 999px;
-  margin-bottom: 12px;
-}
-
-.hero__promo-brand--audi { background: rgba(200, 16, 46, 0.18); color: var(--audi-light); }
-.hero__promo-brand--vw { background: rgba(13, 71, 161, 0.25); color: var(--vw-light); }
-
-.hero__promo-slide h3 {
-  font-family: var(--font-title);
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--white);
-  margin: 0 0 8px;
-}
-
-.hero__promo-slide p {
-  font-size: 0.85rem;
-  color: rgba(245, 245, 245, 0.75);
-  margin: 0 0 14px;
-}
-
-.hero__promo-link {
-  display: inline-block;
-  font-family: var(--font-title);
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--primary-light);
 }
 
 .hero__inner {
@@ -1166,30 +1032,6 @@ p { margin: 0 0 1em; color: var(--muted); }
 }
 
 .vitrine-card__interesse:hover { color: var(--white); border-color: currentColor; }
-
-/* Hero — CTAs secundários (ofertas / test-drive) */
-.hero__actions-secondary {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-top: 18px;
-}
-
-.hero__actions-secondary a,
-.hero__actions-secondary button {
-  font-family: var(--font-title);
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--white);
-  opacity: 0.85;
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-
-.hero__actions-secondary a:hover,
-.hero__actions-secondary button:hover { opacity: 1; color: var(--primary-light); }
 
 /* Seminovos */
 .seminovos { padding: 100px 0; border-bottom: 1px solid var(--border); }
@@ -2108,22 +1950,8 @@ p { margin: 0 0 1em; color: var(--muted); }
   .nav-cta { display: none; }
 
   .hero { min-height: 86vh; padding: 96px 0 96px; align-items: flex-end; }
-  .hero__promo { display: none; }
 
   .hero__actions { justify-content: flex-start; }
-
-  .hero__arrow {
-    top: auto;
-    bottom: 14px;
-    transform: none;
-    width: 38px;
-    height: 38px;
-  }
-  .hero__arrow svg { width: 16px; height: 16px; }
-  .hero__arrow--prev { left: 12px; }
-  .hero__arrow--next { right: 12px; }
-  .hero__dots { bottom: 26px; }
-
 
   .page-hero { padding: 120px 0 48px; }
   .model-hero__img { display: none; }
@@ -2139,7 +1967,6 @@ p { margin: 0 0 1em; color: var(--muted); }
   .ofertas-grid { grid-template-columns: 1fr; }
   .servicos-col__lista { grid-template-columns: 1fr; }
   .dialog-form__row--split { flex-direction: column; }
-  .hero__actions-secondary { flex-direction: column; gap: 12px; }
 
   .contato__grid { grid-template-columns: 1fr; }
   .contato-form__row--split { flex-direction: column; }

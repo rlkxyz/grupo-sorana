@@ -36,47 +36,6 @@ document.addEventListener('click', (event) => {
   }
 });
 
-// Slider do hero (home)
-const heroSlides = document.querySelectorAll('.hero__slide');
-
-if (heroSlides.length) {
-  const heroDots = document.querySelectorAll('.hero__dot');
-  const heroPromos = document.querySelectorAll('.hero__promo-slide');
-  let heroCurrent = 0;
-  let heroAutoplay;
-
-  const showHeroSlide = (index) => {
-    heroCurrent = (index + heroSlides.length) % heroSlides.length;
-    heroSlides.forEach((slide, i) => slide.classList.toggle('is-active', i === heroCurrent));
-    heroDots.forEach((dot, i) => dot.classList.toggle('is-active', i === heroCurrent));
-    heroPromos.forEach((promo, i) => promo.classList.toggle('is-active', i === heroCurrent));
-  };
-
-  const resetHeroAutoplay = () => {
-    clearInterval(heroAutoplay);
-    heroAutoplay = setInterval(() => showHeroSlide(heroCurrent + 1), 6000);
-  };
-
-  document.getElementById('hero-prev')?.addEventListener('click', () => {
-    showHeroSlide(heroCurrent - 1);
-    resetHeroAutoplay();
-  });
-
-  document.getElementById('hero-next')?.addEventListener('click', () => {
-    showHeroSlide(heroCurrent + 1);
-    resetHeroAutoplay();
-  });
-
-  heroDots.forEach((dot, i) => {
-    dot.addEventListener('click', () => {
-      showHeroSlide(i);
-      resetHeroAutoplay();
-    });
-  });
-
-  resetHeroAutoplay();
-}
-
 // Busca no catálogo de modelos (páginas de marca)
 const modeloBusca = document.getElementById('modelo-busca');
 
