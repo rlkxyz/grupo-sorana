@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="img/favicon.png" type="image/png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,7 +16,7 @@
 <header class="header" id="header">
   <div class="container header__inner">
     <a href="index.html" class="logo">
-      <span class="logo__main">GRUPO SORANA</span>
+      <img src="img/logo.png" alt="Grupo Sorana" class="logo__img">
       <span class="logo__sub">AUDI · VOLKSWAGEN</span>
     </a>
 
@@ -51,7 +52,7 @@
       <a href="index.html#contato">Contato</a>
     </nav>
 
-    <a href="https://wa.me/5511913272977" class="btn btn--primary nav-cta" target="_blank" rel="noopener">
+    <a href="https://wa.me/5511995250280" class="btn btn--primary nav-cta" target="_blank" rel="noopener">
       Agendar visita
     </a>
 
@@ -64,9 +65,8 @@
 <main>
 
   <section class="page-hero">
-    <div class="hero__bg" aria-hidden="true">
-      <div class="hero__glow hero__glow--blue"></div>
-    </div>
+    <div class="page-hero__photo" style="background-image: url('img/hero-vw-tiguan.webp');" aria-hidden="true"></div>
+    <div class="page-hero__photo-overlay" aria-hidden="true"></div>
     <div class="container page-hero__inner">
       <p class="eyebrow">Volkswagen no Grupo Sorana</p>
       <h1>Confiança pra todo trajeto, desde 1968.</h1>
@@ -74,18 +74,120 @@
         Na unidade Casa Verde — vendas, serviço, peças, acessórios e
         consórcio, com a tradição que abriu a história do grupo.
       </p>
+      <a href="#novos" class="sobre__link" style="margin-top: 20px; display: inline-block;">Ver Novo Tiguan R-Line e o resto da linha →</a>
     </div>
   </section>
 
   <section class="categoria" id="novos">
-    <div class="container categoria__inner">
+    <div class="container">
       <p class="eyebrow">Novos</p>
-      <h2>A linha Volkswagen completa, com atendimento dedicado.</h2>
-      <p>
-        Do compacto de entrada à picape, um consultor Volkswagen Sorana
-        ajuda a encontrar o modelo certo pra sua rotina.
+      <h2>A linha Volkswagen completa, com o preço de tabela na mão.</h2>
+      <p class="categoria__lead">
+        Do compacto de entrada à picape, com valores sujeitos a alteração e
+        configuração — um consultor Volkswagen Sorana fecha os detalhes e
+        agenda o test-drive.
       </p>
-      <a href="tel:+551121415811" class="btn btn--primary">Falar sobre veículos novos</a>
+
+      <div class="catalogo-search">
+        <input type="text" id="modelo-busca" placeholder="O que você está buscando?" aria-label="Buscar modelo Volkswagen">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </div>
+
+      <div class="modelos-grid" id="modelos-grid">
+        <article class="modelo-card" data-nome="polo track 2026">
+          <img src="novos-vw/img/vw-polo-track.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2026</span>
+          <h3>Polo Track</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 88.990</strong></p>
+          <a href="novos-vw/vw-polo-track.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="polo 2026">
+          <img src="novos-vw/img/vw-polo.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2026</span>
+          <h3>Polo</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 102.990</strong></p>
+          <a href="novos-vw/vw-polo.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="virtus 2026">
+          <img src="novos-vw/img/vw-virtus.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2026</span>
+          <h3>Virtus</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 135.990</strong></p>
+          <a href="novos-vw/vw-virtus.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="jetta gli 2026">
+          <img src="novos-vw/img/vw-jetta-gli.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2026</span>
+          <h3>Jetta GLI</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 239.990</strong></p>
+          <a href="novos-vw/vw-jetta-gli.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="tera 2026">
+          <img src="novos-vw/img/vw-tera.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2026</span>
+          <h3>Tera</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 99.990</strong></p>
+          <a href="novos-vw/vw-tera.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="nivus 2026">
+          <img src="novos-vw/img/vw-nivus-2026.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2026</span>
+          <h3>Nivus</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 140.590</strong></p>
+          <a href="novos-vw/vw-nivus-2026.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="nivus 2027">
+          <img src="novos-vw/img/vw-nivus-2027.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2027</span>
+          <h3>Nivus</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 112.990</strong></p>
+          <a href="novos-vw/vw-nivus-2027.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="t-cross 2026">
+          <img src="novos-vw/img/vw-t-cross-2026.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2026</span>
+          <h3>T-Cross</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 123.990</strong></p>
+          <a href="novos-vw/vw-t-cross-2026.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="t-cross 2027">
+          <img src="novos-vw/img/vw-t-cross-2027.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2027</span>
+          <h3>T-Cross</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 115.790</strong></p>
+          <a href="novos-vw/vw-t-cross-2027.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="taos 2026">
+          <img src="novos-vw/img/vw-taos.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2026</span>
+          <h3>Taos</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 177.990</strong></p>
+          <a href="novos-vw/vw-taos.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="novo tiguan r-line 2026">
+          <img src="novos-vw/img/vw-tiguan.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2026</span>
+          <h3>Novo Tiguan R-Line</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 299.990</strong></p>
+          <a href="novos-vw/vw-tiguan.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="saveiro 2027">
+          <img src="novos-vw/img/vw-saveiro.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2027</span>
+          <h3>Saveiro</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 127.990</strong></p>
+          <a href="novos-vw/vw-saveiro.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="nova amarok v6 2026">
+          <img src="novos-vw/img/vw-amarok.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2026</span>
+          <h3>Nova Amarok V6</h3>
+          <p class="modelo-card__preco">Consulte o valor</p>
+          <a href="novos-vw/vw-amarok.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+      </div>
+
+      <p class="modelos-empty" id="modelos-empty" hidden>Nenhum modelo encontrado — fala com a gente pelo WhatsApp que a gente ajuda a achar.</p>
     </div>
   </section>
 
@@ -162,6 +264,65 @@
     </div>
   </section>
 
+  <section class="unidades" id="unidades-vw">
+    <div class="container">
+      <div class="unidades__head">
+        <div>
+          <p class="eyebrow">Unidades Volkswagen</p>
+          <h2>Onde te atendemos</h2>
+        </div>
+        <a href="enderecos.html" class="btn btn--outline">Ver todos os endereços</a>
+      </div>
+
+      <div class="unidades-grid">
+        <div class="unidade-card">
+          <img class="unidade-card__foto" src="img/unidades/vw-vendas.jpg" alt="Fachada Volkswagen Vendas — Braz Leme" loading="lazy">
+          <span class="unidade-card__marca unidade-card__marca--vw">VW</span>
+          <h3>Volkswagen — Vendas</h3>
+          <p class="unidade-card__endereco">Av. Braz Leme, 295 — Casa Verde, São Paulo/SP — CEP 02511-000</p>
+          <div class="unidade-card__contatos">
+            <a href="tel:+551121415811">(11) 2141-5811</a>
+          </div>
+          <a class="unidade-card__mapa" href="https://www.google.com/maps/search/?api=1&query=Av.+Braz+Leme%2C+295%2C+Casa+Verde%2C+S%C3%A3o+Paulo" target="_blank" rel="noopener">Ver no mapa →</a>
+        </div>
+
+        <div class="unidade-card">
+          <img class="unidade-card__foto" src="img/unidades/vw-vendas.jpg" alt="Fachada Volkswagen Consórcio — Braz Leme" loading="lazy">
+          <span class="unidade-card__marca unidade-card__marca--vw">VW</span>
+          <h3>Volkswagen — Consórcio</h3>
+          <p class="unidade-card__endereco">Av. Braz Leme, 295 — Casa Verde, São Paulo/SP — CEP 02511-900</p>
+          <div class="unidade-card__contatos">
+            <a href="tel:+551121415800">(11) 2141-5800</a>
+          </div>
+          <a class="unidade-card__mapa" href="https://www.google.com/maps/search/?api=1&query=Av.+Braz+Leme%2C+295%2C+Casa+Verde%2C+S%C3%A3o+Paulo" target="_blank" rel="noopener">Ver no mapa →</a>
+        </div>
+
+        <div class="unidade-card">
+          <img class="unidade-card__foto" src="img/unidades/vw-servicos.jpg" alt="Fachada Volkswagen Serviços" loading="lazy">
+          <span class="unidade-card__marca unidade-card__marca--vw">VW</span>
+          <h3>Volkswagen — Serviços</h3>
+          <p class="unidade-card__endereco">R. Prof. Serpa Lopes, 88 — Casa Verde, São Paulo/SP — CEP 02510-050</p>
+          <div class="unidade-card__contatos">
+            <a href="https://wa.me/5511995250280" target="_blank" rel="noopener">WhatsApp (11) 99525-0280</a>
+            <a href="tel:+551121415844">(11) 2141-5844</a>
+          </div>
+          <a class="unidade-card__mapa" href="https://www.google.com/maps/search/?api=1&query=R.+Prof.+Serpa+Lopes%2C+88%2C+Casa+Verde%2C+S%C3%A3o+Paulo" target="_blank" rel="noopener">Ver no mapa →</a>
+        </div>
+
+        <div class="unidade-card">
+          <img class="unidade-card__foto" src="img/unidades/vw-pecas-acessorios.jpg" alt="Fachada Volkswagen Peças e Acessórios" loading="lazy">
+          <span class="unidade-card__marca unidade-card__marca--vw">VW</span>
+          <h3>Volkswagen — Peças &amp; Acessórios</h3>
+          <p class="unidade-card__endereco">R. Prof. Serpa Lopes, 192 — Casa Verde, São Paulo/SP — CEP 02510-050</p>
+          <div class="unidade-card__contatos">
+            <a href="tel:+551121415844">(11) 2141-5844</a>
+          </div>
+          <a class="unidade-card__mapa" href="https://www.google.com/maps/search/?api=1&query=R.+Prof.+Serpa+Lopes%2C+192%2C+Casa+Verde%2C+S%C3%A3o+Paulo" target="_blank" rel="noopener">Ver no mapa →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="cta-band">
     <div class="container">
       <h2>Pronto pra conhecer de perto?</h2>
@@ -178,7 +339,7 @@
 <footer class="footer">
   <div class="container footer__inner">
     <span class="logo logo--footer">
-      <span class="logo__main">GRUPO SORANA</span>
+      <img src="img/logo.png" alt="Grupo Sorana" class="logo__img">
       <span class="logo__sub">AUDI · VOLKSWAGEN</span>
     </span>
     <p>&copy; <span id="ano"></span> Grupo Sorana. Todos os direitos reservados.</p>

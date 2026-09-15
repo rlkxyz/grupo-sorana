@@ -86,6 +86,12 @@ p { margin: 0 0 1em; color: var(--muted); }
   flex-shrink: 0;
 }
 
+.logo__img {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
 .logo__main {
   font-family: var(--font-title);
   font-weight: 700;
@@ -259,6 +265,20 @@ p { margin: 0 0 1em; color: var(--muted); }
 
 .btn--ghost:hover { border-color: rgba(245, 245, 245, 0.5); }
 
+.btn--audi {
+  background: linear-gradient(135deg, var(--audi-light), var(--audi));
+  color: var(--white);
+}
+
+.btn--vw {
+  border: 1px solid rgba(245, 245, 245, 0.4);
+  color: var(--white);
+  background: rgba(11, 11, 13, 0.35);
+  backdrop-filter: blur(6px);
+}
+
+.btn--vw:hover { border-color: var(--vw-light); }
+
 /* Hero */
 .hero {
   position: relative;
@@ -268,6 +288,10 @@ p { margin: 0 0 1em; color: var(--muted); }
   border-bottom: 1px solid var(--border);
   overflow: hidden;
   padding-top: 76px;
+}
+
+.hero--full {
+  min-height: 100vh;
 }
 
 .hero__bg {
@@ -383,6 +407,74 @@ p { margin: 0 0 1em; color: var(--muted); }
 
 .hero__dot.is-active { background: var(--primary-light); transform: scale(1.2); }
 
+/* Hero — painel promocional por marca (troca junto com o slide) */
+.hero__promo {
+  position: absolute;
+  z-index: 2;
+  right: 28px;
+  bottom: 66px;
+  width: clamp(260px, 30vw, 380px);
+}
+
+.hero__promo-slide {
+  position: absolute;
+  inset: auto 0 0 auto;
+  width: 100%;
+  padding: 22px 24px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(245, 245, 245, 0.14);
+  background: rgba(11, 11, 13, 0.72);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  transform: translateY(8px);
+  pointer-events: none;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hero__promo-slide.is-active {
+  position: relative;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.hero__promo-brand {
+  display: inline-block;
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+.hero__promo-brand--audi { background: rgba(200, 16, 46, 0.18); color: var(--audi-light); }
+.hero__promo-brand--vw { background: rgba(13, 71, 161, 0.25); color: var(--vw-light); }
+
+.hero__promo-slide h3 {
+  font-family: var(--font-title);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0 0 8px;
+}
+
+.hero__promo-slide p {
+  font-size: 0.85rem;
+  color: rgba(245, 245, 245, 0.75);
+  margin: 0 0 14px;
+}
+
+.hero__promo-link {
+  display: inline-block;
+  font-family: var(--font-title);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--primary-light);
+}
+
 .hero__inner {
   position: relative;
   z-index: 1;
@@ -395,9 +487,24 @@ p { margin: 0 0 1em; color: var(--muted); }
   color: var(--white);
 }
 
+.hero__title {
+  text-transform: uppercase;
+  font-size: clamp(2.6rem, 7vw, 5.2rem);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.05;
+}
+
 .hero__lead {
   font-size: 1.05rem;
   max-width: 46ch;
+}
+
+.hero--full .hero__lead {
+  font-size: 1.25rem;
+  color: var(--white);
+  opacity: 0.9;
+  margin-top: 4px;
 }
 
 .hero__actions {
@@ -410,6 +517,123 @@ p { margin: 0 0 1em; color: var(--muted); }
   margin: 20px 0 0;
   font-size: 0.85rem;
   color: var(--muted);
+}
+
+.breadcrumb {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.breadcrumb a { color: var(--muted); }
+.breadcrumb a:hover { color: var(--primary-light); }
+.breadcrumb span { color: var(--white); }
+
+.aviso-legal {
+  margin: 18px 0 0;
+  font-size: 0.76rem;
+  color: var(--muted);
+  max-width: 60ch;
+}
+
+/* Ficha técnica (abas) */
+.ficha-tabs { margin-top: 40px; }
+
+.ficha-tabs__nav {
+  display: flex;
+  gap: 28px;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.ficha-tab {
+  background: none;
+  border: none;
+  padding: 0 0 14px;
+  margin-bottom: -1px;
+  font-family: var(--font-title);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.ficha-tab:hover { color: var(--white); }
+
+.ficha-tab.is-active { color: var(--white); border-bottom-color: var(--audi-light); }
+
+.ficha-tabs__panels { padding-top: 28px; }
+
+.ficha-panel {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  columns: 2;
+  column-gap: 40px;
+}
+
+.ficha-panel.is-active { display: block; }
+
+.ficha-panel li {
+  font-size: 0.9rem;
+  color: var(--muted);
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  break-inside: avoid;
+}
+
+.ficha-panel li strong { color: var(--white); font-weight: 600; }
+
+.model-hero__img {
+  position: absolute;
+  right: -20px;
+  bottom: -12px;
+  width: 44%;
+  max-width: 580px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.model-hero__img img {
+  width: 100%;
+  display: block;
+  filter: drop-shadow(0 30px 46px rgba(0, 0, 0, 0.5));
+}
+
+/* Foto cheia em destaque — heroes das páginas Audi e Volkswagen (fotos reais
+   de estoque/divulgação em alta resolução, com leve zoom contínuo) */
+.page-hero__photo {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  animation: page-hero-kenburns 16s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.page-hero__photo-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(100deg, rgba(11, 11, 13, 0.94) 0%, rgba(11, 11, 13, 0.75) 38%, rgba(11, 11, 13, 0.3) 68%, rgba(11, 11, 13, 0.1) 100%),
+    linear-gradient(to top, rgba(11, 11, 13, 0.85) 0%, transparent 40%);
+}
+
+@keyframes page-hero-kenburns {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-hero__photo { animation: none; }
 }
 
 /* Page hero (subpáginas) */
@@ -546,8 +770,148 @@ p { margin: 0 0 1em; color: var(--muted); }
   color: var(--primary-light);
 }
 
+/* Vitrine de veículos (home) */
+.vitrine { padding: 100px 0; border-bottom: 1px solid var(--border); }
+
+.vitrine__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.vitrine__head h2 {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  max-width: 480px;
+  margin-bottom: 0;
+}
+
+.vitrine__lead {
+  max-width: 40ch;
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.vitrine-grid {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.vitrine-card {
+  position: relative;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 22px 26px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.vitrine-card:hover { transform: translateY(-3px); }
+.vitrine-card--audi:hover { border-color: var(--audi-light); }
+.vitrine-card--vw:hover { border-color: var(--vw-light); }
+
+.vitrine-card__marca {
+  display: inline-block;
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+
+.vitrine-card__marca--audi { background: rgba(200, 16, 46, 0.15); color: var(--audi-light); }
+.vitrine-card__marca--vw { background: rgba(13, 71, 161, 0.2); color: var(--vw-light); }
+
+.vitrine-card__foto {
+  height: 190px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.vitrine-card--audi .vitrine-card__foto {
+  background: radial-gradient(circle at 50% 60%, rgba(200, 16, 46, 0.22), rgba(245, 245, 245, 0.03) 70%);
+}
+
+.vitrine-card--vw .vitrine-card__foto {
+  background: radial-gradient(circle at 50% 60%, rgba(13, 71, 161, 0.28), rgba(245, 245, 245, 0.03) 70%);
+}
+
+.vitrine-card__foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.vitrine-card h3 {
+  font-size: 1.15rem;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.vitrine-card__meta {
+  font-size: 0.85rem;
+  margin: 0 0 14px;
+}
+
+.vitrine-card__preco {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0 0 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.vitrine-card__preco strong {
+  display: block;
+  margin-top: 2px;
+  font-family: var(--font-title);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.vitrine-card__link {
+  display: inline-block;
+  font-family: var(--font-title);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--primary-light);
+}
+
+.vitrine__foot {
+  margin-top: 40px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
 /* Sobre / Quem Somos */
 .sobre { padding: 100px 0; border-bottom: 1px solid var(--border); }
+
+.sobre__inner {
+  display: grid;
+  grid-template-columns: 1fr 0.95fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.sobre__foto {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
 
 .sobre h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); max-width: 720px; }
 
@@ -702,6 +1066,56 @@ p { margin: 0 0 1em; color: var(--muted); }
   color: var(--muted);
 }
 
+/* Frotas — banner comercial (home) */
+.frotas--banner {
+  padding: 90px 0;
+  position: relative;
+  text-align: center;
+  background: var(--bg-alt);
+}
+
+.frotas--banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--audi), var(--vw));
+}
+
+.frotas__banner-inner {
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.frotas--banner .eyebrow { text-align: center; }
+
+.frotas--banner h2 {
+  font-size: clamp(1.7rem, 3.4vw, 2.3rem);
+}
+
+.frotas__banner-lead {
+  font-size: 1rem;
+  max-width: 46ch;
+  margin-bottom: 8px;
+}
+
+.frotas__banner-inner .frotas__actions {
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.frotas__banner-link {
+  font-family: var(--font-title);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--primary-light);
+}
+
 /* Unidades */
 .unidades { padding: 100px 0; border-bottom: 1px solid var(--border); }
 
@@ -735,6 +1149,15 @@ p { margin: 0 0 1em; color: var(--muted); }
 }
 
 .unidade-card:hover { transform: translateY(-3px); }
+
+.unidade-card__foto {
+  width: calc(100% + 48px);
+  height: 160px;
+  margin: -26px -24px 20px;
+  object-fit: cover;
+  display: block;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
 
 .unidade-card__marca {
   display: inline-block;
@@ -804,11 +1227,135 @@ p { margin: 0 0 1em; color: var(--muted); }
 
 .modelo-card:hover { border-color: var(--primary-light); transform: translateY(-3px); }
 
-.modelo-card h3 { font-size: 1.05rem; color: var(--white); margin-bottom: 6px; }
+.modelo-card { position: relative; }
 
-.modelo-card p { margin: 0; font-size: 0.88rem; }
+.modelo-card h3 { font-size: 1.05rem; color: var(--white); margin-bottom: 6px; padding-right: 44px; }
+
+.modelo-card p { margin: 0 0 12px; font-size: 0.88rem; }
+
+.modelo-card__img {
+  width: 100%;
+  height: 130px;
+  object-fit: contain;
+  margin-bottom: 14px;
+  background: rgba(245, 245, 245, 0.03);
+  border-radius: 10px;
+}
+
+.modelo-card__ano {
+  position: absolute;
+  top: 22px;
+  right: 20px;
+  font-family: var(--font-title);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  background: rgba(245, 245, 245, 0.07);
+  padding: 3px 9px;
+  border-radius: 999px;
+}
+
+.modelo-card__preco {
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.modelo-card__preco strong {
+  display: block;
+  margin-top: 2px;
+  font-family: var(--font-title);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.modelo-card__link {
+  display: inline-block;
+  font-family: var(--font-title);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--primary-light);
+}
+
+.modelo-card[hidden] { display: none; }
+
+/* Busca de catálogo */
+.catalogo-search {
+  position: relative;
+  max-width: 420px;
+  margin: 40px 0 32px;
+}
+
+.catalogo-search input {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--white);
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 13px 46px 13px 20px;
+}
+
+.catalogo-search input::placeholder { color: var(--muted); }
+
+.catalogo-search input:focus { outline: none; border-color: var(--primary-light); }
+
+.catalogo-search svg {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 17px;
+  height: 17px;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+.modelos-empty {
+  margin-top: 28px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
 
 .diferenciais__lista--3 { grid-template-columns: repeat(3, 1fr); }
+
+/* Cards genéricos (serviços, acessórios) */
+.categoria h2 { max-width: 640px; }
+
+.categoria__lead { max-width: 640px; }
+
+.cards-grid {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.card:hover { border-color: var(--primary-light); transform: translateY(-3px); }
+
+.card h3 { font-size: 1.05rem; color: var(--white); margin-bottom: 6px; }
+
+.card p { margin: 0 0 14px; font-size: 0.88rem; }
+
+.card__link {
+  margin-top: auto;
+  font-family: var(--font-title);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--primary-light);
+}
 
 /* Grupos de unidades (endereços) */
 .unidades-group { margin-top: 56px; }
@@ -1037,7 +1584,7 @@ p { margin: 0 0 1em; color: var(--muted); }
   font-size: 0.82rem;
 }
 
-.logo--footer { flex-direction: row; align-items: baseline; gap: 8px; }
+.logo--footer { flex-direction: row; align-items: center; gap: 10px; }
 .logo--footer .logo__sub { margin-top: 0; }
 
 /* Responsive */
@@ -1046,9 +1593,16 @@ p { margin: 0 0 1em; color: var(--muted); }
   .timeline { grid-template-columns: repeat(2, 1fr); }
   .diferenciais__lista { grid-template-columns: repeat(2, 1fr); }
   .frotas__inner { grid-template-columns: 1fr; gap: 40px; }
+  .sobre__inner { grid-template-columns: 1fr; gap: 32px; }
+  .sobre__inner .sobre__foto { order: -1; }
   .unidades-grid { grid-template-columns: repeat(2, 1fr); }
   .modelos-grid { grid-template-columns: repeat(2, 1fr); }
+  .vitrine-grid { grid-template-columns: repeat(2, 1fr); }
+  .vitrine__head { flex-direction: column; align-items: flex-start; }
+  .cards-grid { grid-template-columns: repeat(2, 1fr); }
   .contato__cols { grid-template-columns: 1fr; }
+  .ficha-panel { columns: 1; }
+  .model-hero__img { width: 38%; opacity: 0.5; }
 }
 
 @media (max-width: 720px) {
@@ -1097,6 +1651,7 @@ p { margin: 0 0 1em; color: var(--muted); }
   .nav-cta { display: none; }
 
   .hero { min-height: 86vh; padding: 96px 0 96px; align-items: flex-end; }
+  .hero__promo { display: none; }
 
   .hero__actions { justify-content: flex-start; }
 
@@ -1112,13 +1667,17 @@ p { margin: 0 0 1em; color: var(--muted); }
   .hero__arrow--next { right: 12px; }
   .hero__dots { bottom: 26px; }
 
+
   .page-hero { padding: 120px 0 48px; }
+  .model-hero__img { display: none; }
 
   .timeline { grid-template-columns: 1fr; gap: 20px; }
   .diferenciais__lista { grid-template-columns: 1fr; }
 
   .unidades-grid { grid-template-columns: 1fr; }
   .modelos-grid { grid-template-columns: 1fr; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .vitrine-grid { grid-template-columns: 1fr; }
 
   .contato__grid { grid-template-columns: 1fr; }
   .contato-form__row--split { flex-direction: column; }

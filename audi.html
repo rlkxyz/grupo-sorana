@@ -4,10 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Audi — Grupo Sorana</title>
-<meta name="description" content="Audi no Grupo Sorana — novos, seminovos, peças e serviço originais nas unidades Audi Lapa e Audi Center Pinheiros, em São Paulo.">
+<meta name="description" content="Audi no Grupo Sorana — modelos, seminovos, vendas diretas, serviços e acessórios originais nas unidades Audi Lapa e Audi Center Pinheiros, em São Paulo.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="img/favicon.png" type="image/png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,7 +16,7 @@
 <header class="header" id="header">
   <div class="container header__inner">
     <a href="index.html" class="logo">
-      <span class="logo__main">GRUPO SORANA</span>
+      <img src="img/logo.png" alt="Grupo Sorana" class="logo__img">
       <span class="logo__sub">AUDI · VOLKSWAGEN</span>
     </a>
 
@@ -64,66 +65,375 @@
 <main>
 
   <section class="page-hero">
-    <div class="hero__bg" aria-hidden="true">
-      <div class="hero__glow hero__glow--red"></div>
-    </div>
+    <div class="page-hero__photo" style="background-image: url('img/hero-audi-rsq8.webp');" aria-hidden="true"></div>
+    <div class="page-hero__photo-overlay" aria-hidden="true"></div>
     <div class="container page-hero__inner">
-      <p class="eyebrow">Audi no Grupo Sorana</p>
+      <p class="eyebrow">Audi no Grupo Sorana · desde 1995</p>
       <h1>Sofisticação e desempenho, do novo ao seminovo.</h1>
       <p class="page-hero__lead">
-        Nas unidades Audi Lapa e Audi Center Pinheiros — vendas, serviço,
-        peças e acessórios com o padrão de atendimento que a marca exige.
+        Nas unidades Audi Lapa e Audi Center Pinheiros — modelos, seminovos,
+        vendas diretas, serviço e acessórios originais, com o padrão de
+        atendimento que a marca exige.
       </p>
+      <a href="#novos" class="sobre__link" style="margin-top: 20px; display: inline-block;">Ver RS Q8 e o resto da linha →</a>
     </div>
   </section>
 
   <section class="categoria" id="novos">
-    <div class="container categoria__inner">
+    <div class="container">
       <p class="eyebrow">Novos</p>
-      <h2>A linha Audi completa, direto com um consultor.</h2>
-      <p>
-        De hatches de entrada a SUVs de topo de linha, um consultor Audi
-        Sorana ajuda a encontrar o modelo e a configuração certa pra você,
-        com test-drive sob agendamento.
+      <h2>A linha Audi completa, com o preço de tabela na mão.</h2>
+      <p class="categoria__lead">
+        De hatches de entrada a SUVs de topo de linha, com valores sujeitos a
+        alteração e configuração — um consultor Audi Sorana fecha os
+        detalhes e agenda o test-drive.
       </p>
-      <a href="https://wa.me/5511913272977?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20a%20linha%20Audi%20nova." class="btn btn--primary" target="_blank" rel="noopener">Falar sobre veículos novos</a>
+
+      <div class="catalogo-search">
+        <input type="text" id="modelo-busca" placeholder="O que você está buscando?" aria-label="Buscar modelo Audi">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </div>
+
+      <div class="modelos-grid" id="modelos-grid">
+        <article class="modelo-card" data-nome="a3 sedan 2026">
+          <img src="novos/img/audi-a3-sedan.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2026</span>
+          <h3>A3 Sedan</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 314.990</strong></p>
+          <a href="novos/audi-a3-sedan.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="a3 sportback 2026">
+          <img src="novos/img/audi-a3-sportback.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2026</span>
+          <h3>A3 Sportback</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 344.990</strong></p>
+          <a href="novos/audi-a3-sportback.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="a5 sedan 2025">
+          <img src="novos/img/audi-a5-sedan-2025.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2025</span>
+          <h3>A5 Sedan</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 399.990</strong></p>
+          <a href="novos/audi-a5-sedan-2025.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="a5 sedan 2026">
+          <img src="novos/img/audi-a5-sedan-2026.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2026</span>
+          <h3>A5 Sedan</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 424.990</strong></p>
+          <a href="novos/audi-a5-sedan-2026.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="a5 avant 2026">
+          <img src="novos/img/audi-a5-avant.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2026</span>
+          <h3>A5 Avant</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 474.990</strong></p>
+          <a href="novos/audi-a5-avant.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="q3 suv 2026">
+          <img src="novos/img/audi-q3-suv.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2026</span>
+          <h3>Q3 SUV</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 389.990</strong></p>
+          <a href="novos/audi-q3-suv.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="q3 sportback 2026">
+          <img src="novos/img/audi-q3-sportback.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2026</span>
+          <h3>Q3 Sportback</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 399.990</strong></p>
+          <a href="novos/audi-q3-sportback.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="q5 2025">
+          <img src="novos/img/audi-q5-2025.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2025</span>
+          <h3>Q5</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 484.990</strong></p>
+          <a href="novos/audi-q5-2025.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="q5 2026">
+          <img src="novos/img/audi-q5-2026.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2026</span>
+          <h3>Q5</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 513.990</strong></p>
+          <a href="novos/audi-q5-2026.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="q5 sportback 2025">
+          <img src="novos/img/audi-q5-sportback-2025.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2025</span>
+          <h3>Q5 Sportback</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 499.990</strong></p>
+          <a href="novos/audi-q5-sportback-2025.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="q5 sportback 2026">
+          <img src="novos/img/audi-q5-sportback-2026.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2026</span>
+          <h3>Q5 Sportback</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 528.990</strong></p>
+          <a href="novos/audi-q5-sportback-2026.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="sq5 2026">
+          <img src="novos/img/audi-sq5.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2026</span>
+          <h3>SQ5</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 644.990</strong></p>
+          <a href="novos/audi-sq5.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="sq5 sportback 2026">
+          <img src="novos/img/audi-sq5-sportback.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2026</span>
+          <h3>SQ5 Sportback</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 659.990</strong></p>
+          <a href="novos/audi-sq5-sportback.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="q6 e-tron 2025">
+          <img src="novos/img/audi-q6-e-tron-2025.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2025</span>
+          <h3>Q6 e-tron</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 569.990</strong></p>
+          <a href="novos/audi-q6-e-tron-2025.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="q6 sportback e-tron 2025">
+          <img src="novos/img/audi-q6-sportback-e-tron-2025.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2025</span>
+          <h3>Q6 Sportback e-tron</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 624.990</strong></p>
+          <a href="novos/audi-q6-sportback-e-tron-2025.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="q6 e-tron 2026">
+          <img src="novos/img/audi-q6-e-tron-2026.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2026</span>
+          <h3>Q6 e-tron</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 695.990</strong></p>
+          <a href="novos/audi-q6-e-tron-2026.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="q6 sportback e-tron 2026">
+          <img src="novos/img/audi-q6-sportback-e-tron-2026.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2026</span>
+          <h3>Q6 Sportback e-tron</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 710.990</strong></p>
+          <a href="novos/audi-q6-sportback-e-tron-2026.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="sq6 sportback e-tron 2026">
+          <img src="novos/img/audi-sq6-sportback-e-tron.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2026</span>
+          <h3>SQ6 Sportback e-tron</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 790.990</strong></p>
+          <a href="novos/audi-sq6-sportback-e-tron.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="a6 sportback e-tron 2025">
+          <img src="novos/img/audi-a6-sportback-e-tron.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2025</span>
+          <h3>A6 Sportback e-tron</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 649.990</strong></p>
+          <a href="novos/audi-a6-sportback-e-tron.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="a6 avant e-tron 2026">
+          <img src="novos/img/audi-a6-avant-e-tron.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2026</span>
+          <h3>A6 Avant e-tron</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 699.990</strong></p>
+          <a href="novos/audi-a6-avant-e-tron.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="q7 2026">
+          <img src="novos/img/audi-q7.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2026</span>
+          <h3>Q7</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 729.990</strong></p>
+          <a href="novos/audi-q7.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="q8 2026">
+          <img src="novos/img/audi-q8.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2026</span>
+          <h3>Q8</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 819.990</strong></p>
+          <a href="novos/audi-q8.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="rs3 sedan 2026">
+          <img src="novos/img/audi-rs3-sedan.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2026</span>
+          <h3>RS 3 Sedan</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 659.990</strong></p>
+          <a href="novos/audi-rs3-sedan.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+        <article class="modelo-card" data-nome="rs q8 2026">
+          <img src="novos/img/audi-rs-q8.webp" class="modelo-card__img" alt="">
+          <span class="modelo-card__ano">2026</span>
+          <h3>RS Q8</h3>
+          <p class="modelo-card__preco">A partir de <strong>R$ 1.339.990</strong></p>
+          <a href="novos/audi-rs-q8.html" class="modelo-card__link">Saiba mais →</a>
+        </article>
+      </div>
+
+      <p class="modelos-empty" id="modelos-empty" hidden>Nenhum modelo encontrado — fala com a gente pelo WhatsApp que a gente ajuda a achar.</p>
     </div>
   </section>
 
   <section class="categoria" id="seminovos">
-    <div class="container categoria__inner">
+    <div class="container">
       <p class="eyebrow">Seminovos</p>
       <h2>Seminovos com procedência garantida.</h2>
-      <p>
+      <p class="categoria__lead">
         Estoque selecionado, revisado e com garantia — cada Audi seminovo
-        passa por inspeção antes de ir pro showroom.
+        passa por um processo de checagem antes de ir pro showroom.
       </p>
-      <a href="https://wa.me/5511913272977?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20os%20seminovos%20Audi." class="btn btn--primary" target="_blank" rel="noopener">Falar sobre seminovos</a>
+
+      <div class="diferenciais__lista diferenciais__lista--3">
+        <div class="diferencial">
+          <span class="diferencial__num">01</span>
+          <h3>Procedência verificada</h3>
+          <p>Histórico completo do veículo checado antes de qualquer negociação.</p>
+        </div>
+        <div class="diferencial">
+          <span class="diferencial__num">02</span>
+          <h3>Inspeção multiponto</h3>
+          <p>Checklist técnico revisado por especialista da própria rede Audi.</p>
+        </div>
+        <div class="diferencial">
+          <span class="diferencial__num">03</span>
+          <h3>Garantia e suporte</h3>
+          <p>Cobertura pós-venda e acesso direto à rede de serviço autorizada.</p>
+        </div>
+      </div>
+
+      <a href="https://wa.me/5511913272977?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20os%20seminovos%20Audi." class="btn btn--primary" style="margin-top: 40px;" target="_blank" rel="noopener">Falar sobre seminovos</a>
+    </div>
+  </section>
+
+  <section class="categoria" id="vendas-diretas-audi">
+    <div class="container">
+      <p class="eyebrow">Vendas diretas</p>
+      <h2>Frota grande, negociação com consultor dedicado.</h2>
+      <p class="categoria__lead">
+        Frotistas e locadoras têm condição especial na linha Audi — desconto
+        progressivo por volume e financiamento facilitado, negociado direto,
+        sem passar pelo balcão de vendas comum.
+      </p>
+      <a href="vendas-diretas.html" class="btn btn--primary">Ver programa completo de frotas</a>
     </div>
   </section>
 
   <section class="categoria" id="servicos">
-    <div class="container categoria__inner">
+    <div class="container">
       <p class="eyebrow">Serviços</p>
       <h2>Manutenção com peças originais, por quem entende Audi.</h2>
-      <p>
+      <p class="categoria__lead">
         Centro de serviço certificado ISO 9001, com técnicos treinados pela
         montadora e peças 100% originais — do check-up de rotina à
         blindagem de garantia.
       </p>
-      <a href="tel:+551137955525" class="btn btn--primary">Agendar revisão</a>
+
+      <div class="cards-grid">
+        <article class="card">
+          <h3>Revisão programada</h3>
+          <p>Manutenção preventiva com checklist Audi completo e peças originais de fábrica.</p>
+          <a href="tel:+551137955525" class="card__link">Agendar revisão →</a>
+        </article>
+        <article class="card">
+          <h3>Garantia estendida</h3>
+          <p>Prorrogue a cobertura de fábrica e rode tranquilo além do prazo padrão.</p>
+          <a href="tel:+551137955525" class="card__link">Falar sobre garantia →</a>
+        </article>
+        <article class="card">
+          <h3>Funilaria e pintura</h3>
+          <p>Centro técnico com reparo estrutural e pintura em padrão de fábrica.</p>
+          <a href="tel:+551137955525" class="card__link">Falar com funilaria →</a>
+        </article>
+        <article class="card">
+          <h3>Atendimento no seu endereço</h3>
+          <p>Pra revisões mais simples, um técnico Audi equipado vai até você.</p>
+          <a href="https://wa.me/5511913272977?text=Ol%C3%A1!%20Quero%20saber%20sobre%20o%20atendimento%20Audi%20no%20meu%20endere%C3%A7o." class="card__link" target="_blank" rel="noopener">Falar no WhatsApp →</a>
+        </article>
+      </div>
     </div>
   </section>
 
   <section class="categoria" id="acessorios">
-    <div class="container categoria__inner">
+    <div class="container">
       <p class="eyebrow">Acessórios</p>
       <h2>Acessórios originais pra deixar seu Audi com a sua cara.</h2>
-      <p>
+      <p class="categoria__lead">
         Linha completa de acessórios genuínos Audi, com a mesma garantia
         e qualidade de fábrica.
       </p>
-      <a href="tel:+551137955520" class="btn btn--primary">Falar com Peças Audi</a>
+
+      <div class="cards-grid">
+        <article class="card">
+          <h3>Proteção</h3>
+          <p>Película, tapetes de borracha e trava antifurto pra manter o carro protegido.</p>
+          <a href="tel:+551137955520" class="card__link">Falar com Peças →</a>
+        </article>
+        <article class="card">
+          <h3>Rodas e estética</h3>
+          <p>Rodas de liga leve, faróis e detalhes que mudam a cara do seu Audi.</p>
+          <a href="tel:+551137955520" class="card__link">Falar com Peças →</a>
+        </article>
+        <article class="card">
+          <h3>Interior</h3>
+          <p>Iluminação ambiente, acabamentos e acessórios pra personalizar a cabine.</p>
+          <a href="tel:+551137955520" class="card__link">Falar com Peças →</a>
+        </article>
+        <article class="card">
+          <h3>Viagem</h3>
+          <p>Rack de teto, engate e kit multimídia pra quem roda estrada com frequência.</p>
+          <a href="tel:+551137955520" class="card__link">Falar com Peças →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="categoria" id="quem-somos-audi">
+    <div class="container">
+      <p class="eyebrow">Audi Sorana</p>
+      <h2>Uma concessionária dedicada à marca desde 1995.</h2>
+      <p class="categoria__lead">
+        A Audi chegou ao Grupo Sorana em 1995 e desde então opera com
+        showroom e centro de serviço próprios nas unidades Lapa e Center
+        Pinheiros — parte da mesma operação com mais de 300 mil carros
+        vendidos e centros de serviço certificados ISO 9001.
+      </p>
+      <a href="quem-somos.html" class="sobre__link">Conhecer nossa história completa →</a>
+    </div>
+  </section>
+
+  <section class="unidades" id="unidades-audi">
+    <div class="container">
+      <div class="unidades__head">
+        <div>
+          <p class="eyebrow">Unidades Audi</p>
+          <h2>Onde te atendemos</h2>
+        </div>
+        <a href="enderecos.html" class="btn btn--outline">Ver todos os endereços</a>
+      </div>
+
+      <div class="unidades-grid">
+        <div class="unidade-card">
+          <img class="unidade-card__foto" src="img/unidades/audi-center-pinheiros.jpg" alt="Fachada Audi Center Pinheiros" loading="lazy">
+          <span class="unidade-card__marca unidade-card__marca--audi">Audi</span>
+          <h3>Audi Center Pinheiros</h3>
+          <p class="unidade-card__endereco">Av. Pedroso de Morais, 1552 — Pinheiros, São Paulo/SP — CEP 05420-002</p>
+          <p class="unidade-card__endereco">Vendas: seg-sex 09h–18h · sáb 09h–14h</p>
+          <div class="unidade-card__contatos">
+            <a href="https://wa.me/5511913272977" target="_blank" rel="noopener">WhatsApp (11) 91327-2977</a>
+            <a href="tel:+551121099099">(11) 2109-9099</a>
+          </div>
+          <a class="unidade-card__mapa" href="https://www.google.com/maps/search/?api=1&query=Av.+Pedroso+de+Morais%2C+1552%2C+Pinheiros%2C+S%C3%A3o+Paulo" target="_blank" rel="noopener">Ver no mapa →</a>
+        </div>
+
+        <div class="unidade-card">
+          <img class="unidade-card__foto" src="img/unidades/audi-lapa.jpg" alt="Fachada Audi Lapa" loading="lazy">
+          <span class="unidade-card__marca unidade-card__marca--audi">Audi</span>
+          <h3>Audi Lapa</h3>
+          <p class="unidade-card__endereco">Av. Ermano Marchetti, 826 — Lapa, São Paulo/SP — CEP 05038-000</p>
+          <p class="unidade-card__endereco">Vendas: seg-sex 08h–19h · sáb 09h–14h · Serviços/Peças: seg-sex 08h–18h</p>
+          <div class="unidade-card__contatos">
+            <a href="tel:+551137955811">Vendas (11) 3795-5811</a>
+            <a href="tel:+551137955525">Serviços (11) 3795-5525</a>
+            <a href="tel:+551137955520">Peças (11) 3795-5520</a>
+          </div>
+          <a class="unidade-card__mapa" href="https://www.google.com/maps/search/?api=1&query=Av.+Ermano+Marchetti%2C+826%2C+Lapa%2C+S%C3%A3o+Paulo" target="_blank" rel="noopener">Ver no mapa →</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -143,7 +453,7 @@
 <footer class="footer">
   <div class="container footer__inner">
     <span class="logo logo--footer">
-      <span class="logo__main">GRUPO SORANA</span>
+      <img src="img/logo.png" alt="Grupo Sorana" class="logo__img">
       <span class="logo__sub">AUDI · VOLKSWAGEN</span>
     </span>
     <p>&copy; <span id="ano"></span> Grupo Sorana. Todos os direitos reservados.</p>
@@ -157,3 +467,5 @@
 <script src="script.js"></script>
 </body>
 </html>
+</content>
+</invoke>

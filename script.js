@@ -41,6 +41,7 @@ const heroSlides = document.querySelectorAll('.hero__slide');
 
 if (heroSlides.length) {
   const heroDots = document.querySelectorAll('.hero__dot');
+  const heroPromos = document.querySelectorAll('.hero__promo-slide');
   let heroCurrent = 0;
   let heroAutoplay;
 
@@ -48,6 +49,7 @@ if (heroSlides.length) {
     heroCurrent = (index + heroSlides.length) % heroSlides.length;
     heroSlides.forEach((slide, i) => slide.classList.toggle('is-active', i === heroCurrent));
     heroDots.forEach((dot, i) => dot.classList.toggle('is-active', i === heroCurrent));
+    heroPromos.forEach((promo, i) => promo.classList.toggle('is-active', i === heroCurrent));
   };
 
   const resetHeroAutoplay = () => {
@@ -74,6 +76,43 @@ if (heroSlides.length) {
 
   resetHeroAutoplay();
 }
+
+// Busca no catálogo de modelos (páginas de marca)
+const modeloBusca = document.getElementById('modelo-busca');
+
+if (modeloBusca) {
+  const modeloCards = document.querySelectorAll('#modelos-grid .modelo-card');
+  const modeloVazio = document.getElementById('modelos-empty');
+
+  modeloBusca.addEventListener('input', () => {
+    const termo = modeloBusca.value.trim().toLowerCase();
+    let visiveis = 0;
+
+    modeloCards.forEach((card) => {
+      const nome = card.dataset.nome || '';
+      const match = nome.includes(termo);
+      card.hidden = !match;
+      if (match) visiveis++;
+    });
+
+    if (modeloVazio) modeloVazio.hidden = visiveis !== 0;
+  });
+}
+
+// Abas da ficha técnica (páginas de modelo)
+document.querySelectorAll('.ficha-tabs').forEach((wrap) => {
+  const tabs = wrap.querySelectorAll('.ficha-tab');
+  const panels = wrap.querySelectorAll('.ficha-panel');
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      tabs.forEach((t) => t.classList.remove('is-active'));
+      panels.forEach((p) => p.classList.remove('is-active'));
+      tab.classList.add('is-active');
+      wrap.querySelector(`.ficha-panel[data-panel="${tab.dataset.tab}"]`).classList.add('is-active');
+    });
+  });
+});
 
 const form = document.getElementById('contato-form');
 

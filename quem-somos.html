@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="img/favicon.png" type="image/png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,7 +16,7 @@
 <header class="header" id="header">
   <div class="container header__inner">
     <a href="index.html" class="logo">
-      <span class="logo__main">GRUPO SORANA</span>
+      <img src="img/logo.png" alt="Grupo Sorana" class="logo__img">
       <span class="logo__sub">AUDI · VOLKSWAGEN</span>
     </a>
 
@@ -80,38 +81,44 @@
 
   <section class="sobre">
     <div class="container">
-      <p class="eyebrow">O grupo</p>
-      <h2>Uma história que começa em 1968.</h2>
-      <p class="sobre__lead">
-        A história do Grupo Sorana começa com a primeira unidade Volkswagen,
-        na Av. Braz Leme — endereço que segue até hoje como matriz do grupo.
-        Ao longo de quase seis décadas, a Sorana se manteve entre as líderes
-        em vendas Volkswagen na região da Grande São Paulo, reconhecimento
-        que veio, entre outros marcos, com o prêmio Volante de Ouro em 1986,
-        como bicampeã de vendas da marca.
-      </p>
-      <p class="sobre__lead">
-        Em 1995, a chegada da Audi deu início a uma nova fase: a operação
-        multimarca que define o grupo até hoje, somando a tradição
-        Volkswagen à sofisticação Audi sem abrir mão da identidade de
-        nenhuma das duas marcas. A qualidade em vendas, já premiada diversas
-        vezes, se reflete também nos centros de assistência técnica —
-        reconhecidos pelas montadoras e certificados ISO 9001.
-      </p>
+      <div class="sobre__inner">
+        <div>
+          <p class="eyebrow">O grupo</p>
+          <h2>Uma história que começa em 1968.</h2>
+          <p class="sobre__lead">
+            A história do Grupo Sorana começa com a primeira unidade Volkswagen,
+            na Av. Braz Leme — endereço que segue até hoje como matriz do grupo.
+            Ao longo de quase seis décadas, a Sorana se manteve entre as líderes
+            em vendas Volkswagen na região da Grande São Paulo, reconhecimento
+            que veio, entre outros marcos, com o prêmio Volante de Ouro em 1986,
+            como bicampeã de vendas da marca.
+          </p>
+          <p class="sobre__lead">
+            Em 1995, a chegada da Audi deu início a uma nova fase: a operação
+            multimarca que define o grupo até hoje, somando a tradição
+            Volkswagen à sofisticação Audi sem abrir mão da identidade de
+            nenhuma das duas marcas. A qualidade em vendas, já premiada diversas
+            vezes, se reflete também nos centros de assistência técnica —
+            reconhecidos pelas montadoras e certificados ISO 9001.
+          </p>
 
-      <div class="stats-row">
-        <div class="stat">
-          <span class="stat__num">58</span>
-          <span class="stat__label">Anos de história</span>
+          <div class="stats-row">
+            <div class="stat">
+              <span class="stat__num">58</span>
+              <span class="stat__label">Anos de história</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num">+300 mil</span>
+              <span class="stat__label">Carros vendidos</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num">ISO 9001</span>
+              <span class="stat__label">Centros de serviço certificados</span>
+            </div>
+          </div>
         </div>
-        <div class="stat">
-          <span class="stat__num">+300 mil</span>
-          <span class="stat__label">Carros vendidos</span>
-        </div>
-        <div class="stat">
-          <span class="stat__num">ISO 9001</span>
-          <span class="stat__label">Centros de serviço certificados</span>
-        </div>
+
+        <img class="sobre__foto" src="img/grupo-sorana-mosaico.jpg" alt="Fachadas das unidades do Grupo Sorana — Audi Center Pinheiros, Audi Lapa e Volkswagen Casa Verde" loading="lazy">
       </div>
 
       <div class="timeline">
@@ -181,7 +188,7 @@
 <footer class="footer">
   <div class="container footer__inner">
     <span class="logo logo--footer">
-      <span class="logo__main">GRUPO SORANA</span>
+      <img src="img/logo.png" alt="Grupo Sorana" class="logo__img">
       <span class="logo__sub">AUDI · VOLKSWAGEN</span>
     </span>
     <p>&copy; <span id="ano"></span> Grupo Sorana. Todos os direitos reservados.</p>

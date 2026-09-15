@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="img/favicon.png" type="image/png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,7 +16,7 @@
 <header class="header" id="header">
   <div class="container header__inner">
     <a href="#home" class="logo">
-      <span class="logo__main">GRUPO SORANA</span>
+      <img src="img/logo.png" alt="Grupo Sorana" class="logo__img">
       <span class="logo__sub">AUDI · VOLKSWAGEN</span>
     </a>
 
@@ -63,10 +64,10 @@
 
 <main>
 
-  <section class="hero" id="home">
+  <section class="hero hero--full" id="home">
     <div class="hero__slider" id="hero-slider" aria-hidden="true">
-      <div class="hero__slide is-active" style="background-image: url('img/audi-q8.jpg');"></div>
-      <div class="hero__slide" style="background-image: url('img/vw-tera.png');"></div>
+      <div class="hero__slide is-active" style="background-image: url('img/hero-audi-rsq8.webp');"></div>
+      <div class="hero__slide" style="background-image: url('img/hero-vw-tiguan.webp');"></div>
       <div class="hero__slider-overlay"></div>
     </div>
 
@@ -83,16 +84,12 @@
     </div>
 
     <div class="container hero__inner">
-      <p class="eyebrow">Concessionária multimarca premium</p>
-      <h1>Audi e Volkswagen.<br>Um padrão, duas paixões.</h1>
-      <p class="hero__lead">
-        Novos, seminovos, peças, serviços, consórcio e vendas diretas —
-        com o atendimento que quem dirige um carro premium espera, em
-        todas as unidades do grupo.
-      </p>
+      <p class="eyebrow">Audi e Volkswagen em São Paulo</p>
+      <h1 class="hero__title">Duas marcas.<br>Uma experiência.</h1>
+      <p class="hero__lead">Conheça a Sorana.</p>
       <div class="hero__actions">
-        <a href="https://wa.me/5511913272977" class="btn btn--primary" target="_blank" rel="noopener">Agendar visita</a>
-        <a href="#unidades" class="btn btn--outline">Ver unidades</a>
+        <a href="audi.html" class="btn btn--audi">Conhecer Audi</a>
+        <a href="volkswagen.html" class="btn btn--vw">Conhecer Volkswagen</a>
       </div>
       <p class="hero__proof">Desde 1968 no mercado automotivo de São Paulo.</p>
     </div>
@@ -145,67 +142,137 @@
     </div>
   </section>
 
-  <section class="sobre" id="sobre">
+  <section class="vitrine" id="veiculos">
     <div class="container">
-      <p class="eyebrow">Desde 1968</p>
-      <h2>58 anos construindo uma referência multimarca em São Paulo.</h2>
-      <p class="sobre__lead">
-        Tudo começou com a primeira unidade Volkswagen, na Av. Braz Leme —
-        que segue até hoje como matriz do grupo. Em 1995, a chegada da Audi
-        deu início a uma operação multimarca que já vendeu mais de 300 mil
-        carros e opera hoje com centros de serviço certificados ISO 9001.
-      </p>
-
-      <div class="stats-row">
-        <div class="stat">
-          <span class="stat__num">58</span>
-          <span class="stat__label">Anos de história</span>
+      <div class="vitrine__head">
+        <div>
+          <p class="eyebrow">Catálogo</p>
+          <h2>Encontre seu próximo carro.</h2>
         </div>
-        <div class="stat">
-          <span class="stat__num">+300 mil</span>
-          <span class="stat__label">Carros vendidos</span>
-        </div>
-        <div class="stat">
-          <span class="stat__num">ISO 9001</span>
-          <span class="stat__label">Centros de serviço certificados</span>
-        </div>
+        <p class="vitrine__lead">Uma amostra da linha Audi e Volkswagen disponível na Sorana — fale com um consultor pra ver o modelo completo, cores e condições.</p>
       </div>
 
-      <a href="quem-somos.html" class="sobre__link">Conhecer nossa história completa →</a>
+      <div class="vitrine-grid">
+
+        <article class="vitrine-card vitrine-card--audi">
+          <span class="vitrine-card__marca vitrine-card__marca--audi">Audi</span>
+          <div class="vitrine-card__foto">
+            <img src="novos/img/audi-a3-sedan.webp" alt="Audi A3 Sedan" loading="lazy">
+          </div>
+          <h3>A3 Sedan</h3>
+          <p class="vitrine-card__meta">2026 · Sedan de entrada</p>
+          <p class="vitrine-card__preco">A partir de <strong>R$ 314.990</strong></p>
+          <a href="novos/audi-a3-sedan.html" class="vitrine-card__link">Conhecer o modelo →</a>
+        </article>
+
+        <article class="vitrine-card vitrine-card--audi">
+          <span class="vitrine-card__marca vitrine-card__marca--audi">Audi</span>
+          <div class="vitrine-card__foto">
+            <img src="novos/img/audi-q5-2026.webp" alt="Audi Q5" loading="lazy">
+          </div>
+          <h3>Q5</h3>
+          <p class="vitrine-card__meta">2026 · SUV médio</p>
+          <p class="vitrine-card__preco">A partir de <strong>R$ 513.990</strong></p>
+          <a href="novos/audi-q5-2026.html" class="vitrine-card__link">Conhecer o modelo →</a>
+        </article>
+
+        <article class="vitrine-card vitrine-card--audi">
+          <span class="vitrine-card__marca vitrine-card__marca--audi">Audi</span>
+          <div class="vitrine-card__foto">
+            <img src="novos/img/audi-q8.webp" alt="Audi Q8" loading="lazy">
+          </div>
+          <h3>Q8</h3>
+          <p class="vitrine-card__meta">2026 · SUV coupé topo de linha</p>
+          <p class="vitrine-card__preco">A partir de <strong>R$ 819.990</strong></p>
+          <a href="novos/audi-q8.html" class="vitrine-card__link">Conhecer o modelo →</a>
+        </article>
+
+        <article class="vitrine-card vitrine-card--vw">
+          <span class="vitrine-card__marca vitrine-card__marca--vw">Volkswagen</span>
+          <div class="vitrine-card__foto">
+            <img src="novos-vw/img/vw-t-cross-2026.webp" alt="Volkswagen T-Cross" loading="lazy">
+          </div>
+          <h3>T-Cross</h3>
+          <p class="vitrine-card__meta">2026 · SUV compacto mais vendido do Brasil</p>
+          <p class="vitrine-card__preco">A partir de <strong>R$ 123.990</strong></p>
+          <a href="novos-vw/vw-t-cross-2026.html" class="vitrine-card__link">Conhecer o modelo →</a>
+        </article>
+
+        <article class="vitrine-card vitrine-card--vw">
+          <span class="vitrine-card__marca vitrine-card__marca--vw">Volkswagen</span>
+          <div class="vitrine-card__foto">
+            <img src="novos-vw/img/vw-nivus-2026.webp" alt="Volkswagen Nivus" loading="lazy">
+          </div>
+          <h3>Nivus</h3>
+          <p class="vitrine-card__meta">2026 · SUV coupé compacto</p>
+          <p class="vitrine-card__preco">A partir de <strong>R$ 140.590</strong></p>
+          <a href="novos-vw/vw-nivus-2026.html" class="vitrine-card__link">Conhecer o modelo →</a>
+        </article>
+
+        <article class="vitrine-card vitrine-card--vw">
+          <span class="vitrine-card__marca vitrine-card__marca--vw">Volkswagen</span>
+          <div class="vitrine-card__foto">
+            <img src="novos-vw/img/vw-taos.webp" alt="Volkswagen Taos" loading="lazy">
+          </div>
+          <h3>Taos</h3>
+          <p class="vitrine-card__meta">2026 · SUV médio</p>
+          <p class="vitrine-card__preco">A partir de <strong>R$ 177.990</strong></p>
+          <a href="novos-vw/vw-taos.html" class="vitrine-card__link">Conhecer o modelo →</a>
+        </article>
+
+      </div>
+
+      <div class="vitrine__foot">
+        <a href="audi.html#novos" class="btn btn--ghost">Ver linha completa Audi →</a>
+        <a href="volkswagen.html#novos" class="btn btn--ghost">Ver linha completa Volkswagen →</a>
+      </div>
     </div>
   </section>
 
-  <section class="frotas" id="frotas">
-    <div class="container frotas__inner">
-      <div class="frotas__text">
-        <p class="eyebrow">Vendas diretas</p>
-        <h2>Frota grande, negociação à altura.</h2>
-        <p>
-          O Grupo Sorana atende frotistas e locadoras com condições
-          exclusivas na linha Audi — desconto progressivo por volume e
-          taxas facilitadas de financiamento, negociado direto com um
-          consultor dedicado.
-        </p>
-        <div class="frotas__actions">
-          <a href="https://wa.me/5511913272977?text=Ol%C3%A1!%20Tenho%20interesse%20em%20vendas%20diretas%20para%20frota%2Flocadora." class="btn btn--primary" target="_blank" rel="noopener">Falar com consultor de frotas</a>
-          <a href="vendas-diretas.html" class="btn btn--outline">Ver programa completo</a>
+  <section class="sobre" id="sobre">
+    <div class="container">
+      <div class="sobre__inner">
+        <div>
+          <p class="eyebrow">Desde 1968</p>
+          <h2>58 anos construindo uma referência multimarca em São Paulo.</h2>
+          <p class="sobre__lead">
+            Tudo começou com a primeira unidade Volkswagen, na Av. Braz Leme —
+            que segue até hoje como matriz do grupo. Em 1995, a chegada da Audi
+            deu início a uma operação multimarca que já vendeu mais de 300 mil
+            carros e opera hoje com centros de serviço certificados ISO 9001.
+          </p>
+
+          <div class="stats-row">
+            <div class="stat">
+              <span class="stat__num">58</span>
+              <span class="stat__label">Anos de história</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num">+300 mil</span>
+              <span class="stat__label">Carros vendidos</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num">ISO 9001</span>
+              <span class="stat__label">Centros de serviço certificados</span>
+            </div>
+          </div>
+
+          <a href="quem-somos.html" class="sobre__link">Conhecer nossa história completa →</a>
         </div>
+
+        <img class="sobre__foto" src="img/grupo-sorana-mosaico.jpg" alt="Fachadas das unidades do Grupo Sorana — Audi Center Pinheiros, Audi Lapa e Volkswagen Casa Verde" loading="lazy">
       </div>
-      <div class="frotas__card">
-        <span class="frotas__card-label">Linha disponível pra frotas</span>
-        <div class="frotas__pills">
-          <span class="pill">Q8</span>
-          <span class="pill">Q7</span>
-          <span class="pill">A6 Sportback e-tron</span>
-          <span class="pill">A5 Sedan</span>
-          <span class="pill">A3 Sedan</span>
-          <span class="pill">A3 Sportback</span>
-        </div>
-        <ul class="frotas__lista">
-          <li>Frotas corporativas</li>
-          <li>Locadoras</li>
-          <li>Negociação dedicada por volume</li>
-        </ul>
+    </div>
+  </section>
+
+  <section class="frotas frotas--banner" id="frotas">
+    <div class="container frotas__banner-inner">
+      <p class="eyebrow">Vendas diretas</p>
+      <h2>Sua empresa precisa de uma frota à altura?</h2>
+      <p class="frotas__banner-lead">Condições especiais para empresas, frotistas e locadoras — negociação direta com um consultor dedicado.</p>
+      <div class="frotas__actions">
+        <a href="https://wa.me/5511913272977?text=Ol%C3%A1!%20Tenho%20interesse%20em%20vendas%20diretas%20para%20frota%2Flocadora." class="btn btn--primary" target="_blank" rel="noopener">Falar com consultor</a>
+        <a href="vendas-diretas.html" class="frotas__banner-link">Ver programa completo →</a>
       </div>
     </div>
   </section>
@@ -222,6 +289,7 @@
 
       <div class="unidades-grid">
         <div class="unidade-card">
+          <img class="unidade-card__foto" src="img/unidades/audi-center-pinheiros.jpg" alt="Fachada Audi Center Pinheiros" loading="lazy">
           <span class="unidade-card__marca unidade-card__marca--audi">Audi</span>
           <h3>Audi Center Pinheiros</h3>
           <p class="unidade-card__endereco">Av. Pedroso de Morais, 1552 — Pinheiros, São Paulo/SP — CEP 05420-002</p>
@@ -233,6 +301,7 @@
         </div>
 
         <div class="unidade-card">
+          <img class="unidade-card__foto" src="img/unidades/audi-lapa.jpg" alt="Fachada Audi Lapa" loading="lazy">
           <span class="unidade-card__marca unidade-card__marca--audi">Audi</span>
           <h3>Audi Lapa</h3>
           <p class="unidade-card__endereco">Av. Ermano Marchetti, 826 — Lapa, São Paulo/SP — CEP 05038-000</p>
@@ -245,6 +314,7 @@
         </div>
 
         <div class="unidade-card">
+          <img class="unidade-card__foto" src="img/unidades/vw-vendas.jpg" alt="Fachada Volkswagen Vendas — Braz Leme" loading="lazy">
           <span class="unidade-card__marca unidade-card__marca--vw">VW</span>
           <h3>Volkswagen — Vendas</h3>
           <p class="unidade-card__endereco">Av. Braz Leme, 295 — Casa Verde, São Paulo/SP — CEP 02511-000</p>
@@ -255,6 +325,7 @@
         </div>
 
         <div class="unidade-card">
+          <img class="unidade-card__foto" src="img/unidades/vw-vendas.jpg" alt="Fachada Volkswagen Consórcio — Braz Leme" loading="lazy">
           <span class="unidade-card__marca unidade-card__marca--vw">VW</span>
           <h3>Volkswagen — Consórcio</h3>
           <p class="unidade-card__endereco">Av. Braz Leme, 295 — Casa Verde, São Paulo/SP — CEP 02511-900</p>
@@ -265,6 +336,7 @@
         </div>
 
         <div class="unidade-card">
+          <img class="unidade-card__foto" src="img/unidades/vw-servicos.jpg" alt="Fachada Volkswagen Serviços" loading="lazy">
           <span class="unidade-card__marca unidade-card__marca--vw">VW</span>
           <h3>Volkswagen — Serviços</h3>
           <p class="unidade-card__endereco">R. Prof. Serpa Lopes, 88 — Casa Verde, São Paulo/SP — CEP 02510-050</p>
@@ -276,6 +348,7 @@
         </div>
 
         <div class="unidade-card">
+          <img class="unidade-card__foto" src="img/unidades/vw-pecas-acessorios.jpg" alt="Fachada Volkswagen Peças e Acessórios" loading="lazy">
           <span class="unidade-card__marca unidade-card__marca--vw">VW</span>
           <h3>Volkswagen — Peças &amp; Acessórios</h3>
           <p class="unidade-card__endereco">R. Prof. Serpa Lopes, 192 — Casa Verde, São Paulo/SP — CEP 02510-050</p>
@@ -355,7 +428,7 @@
 <footer class="footer">
   <div class="container footer__inner">
     <span class="logo logo--footer">
-      <span class="logo__main">GRUPO SORANA</span>
+      <img src="img/logo.png" alt="Grupo Sorana" class="logo__img">
       <span class="logo__sub">AUDI · VOLKSWAGEN</span>
     </span>
     <p>&copy; <span id="ano"></span> Grupo Sorana. Todos os direitos reservados.</p>
